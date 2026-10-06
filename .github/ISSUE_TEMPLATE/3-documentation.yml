@@ -1,0 +1,39 @@
+name: Documentation issue
+description: Something in the docs is missing, wrong or unclear.
+title: "docs: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Where?
+      description: File or section, e.g. README "Quick start", docs/schema.md, a connector DESIGN.md.
+      placeholder: docs/connectors.md → Connector contract
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem?
+      options:
+        - Incorrect or outdated
+        - Missing
+        - Unclear or confusing
+        - Typo or formatting
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What's wrong, and what did you expect to find?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix
+      description: Proposed wording, if you have it.
