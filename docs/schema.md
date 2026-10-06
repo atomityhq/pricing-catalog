@@ -57,6 +57,8 @@ Tiered pricing should remain tiered rather than being collapsed into an arbitrar
 
 ## Provenance
 
-Every record requires a source type, source URL, and retrieval timestamp.
+Every record requires a source type and source URL. The snapshot records
+when the catalog was generated via `Snapshot.GeneratedAt`.
 
-Consumers do not need to fetch the source at runtime, but maintainers must be able to understand where catalog values came from.
+Consumers do not need to fetch the source at runtime, but maintainers must be
+able to understand where catalog values came from and when the catalog was built.

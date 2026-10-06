@@ -15,6 +15,40 @@ The interface is intentionally small.
 
 A connector can internally contain whatever provider-specific types and helpers it needs.
 
+## Pipeline contract
+
+The connector is responsible for provider-specific work:
+
+```text
+provider source
+      ↓
+connector
+      ↓
+provider-specific parsing
+      ↓
+normalization
+      ↓
+canonical PricingRecord values
+```
+
+The generic pipeline then performs:
+
+```text
+canonical records
+      ↓
+validation
+      ↓
+deterministic ordering
+      ↓
+catalog snapshot
+```
+
+Candidates must not implement their own snapshot generation, persistence, or
+refresh pipeline.
+
+The reusable test helper `connector/testkit.AssertConnectorContract` runs the
+connector through this same pipeline.
+
 ## Recommended flow
 
 ```text

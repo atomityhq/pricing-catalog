@@ -1,0 +1,48 @@
+{
+  "provider": "example-cloud",
+  "prices": [
+    {
+      "product_id": "vm-general-4",
+      "product": "General VM",
+      "sku": "vm-general-4",
+      "region": "eu-west",
+      "purchase_model": "on_demand",
+      "unit": "hour",
+      "currency": "EUR",
+      "dimensions": {
+        "vcpus": "4",
+        "memory_gib": "16"
+      },
+      "tiers": [
+        {
+          "from": "0",
+          "to": "100",
+          "price": "0.1200"
+        },
+        {
+          "from": "100",
+          "price": "0.1000"
+        }
+      ]
+    },
+    {
+      "product_id": "vm-general-4",
+      "product": "General VM",
+      "sku": "vm-general-4",
+      "region": "eu-west",
+      "purchase_model": "committed",
+      "unit": "hour",
+      "currency": "EUR",
+      "dimensions": {
+        "vcpus": "4",
+        "memory_gib": "16"
+      },
+      "tiers": [
+        {
+          "from": "0",
+          "price": "0.0750"
+        }
+      ]
+    }
+  ]
+}

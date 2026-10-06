@@ -50,10 +50,10 @@ Provider pricing is expected to change over time. Consumers should depend on a *
 pkg/catalog/                Canonical model, validation, serialization, queries
 pkg/connector/              Connector contract and reusable test helpers
 connectors/                  Provider connectors and reference examples
-catalog/snapshots/           Versioned catalog snapshots
 cmd/pricing-catalog/         Small maintenance/validation CLI
 tests/                       Cross-connector tests
 docs/                        Architecture and contributor documentation
+internal/pipeline/           Canonical connector → validation → snapshot pipeline
 internal/evaluation/         Maintainer-only evaluation entry point
 .github/workflows/           Public CI
 ```
@@ -103,6 +103,7 @@ The public API is intentionally small. Consumers should query canonical data wit
 Start with:
 
 - [`docs/architecture.md`](docs/architecture.md)
+- [`docs/pipeline.md`](docs/pipeline.md)
 - [`docs/schema.md`](docs/schema.md)
 - [`docs/connectors.md`](docs/connectors.md)
 - [`docs/consumer.md`](docs/consumer.md)
@@ -116,4 +117,22 @@ Reference implementations:
 
 ## Status
 
-This repository currently provides the **library and candidate-assignment skeleton**. The full production refresh/release automation can be added incrementally without changing the candidate-facing connector contract.
+This repository currently provides the **library and candidate-assignment skeleton**,
+including the connector → validation → snapshot pipeline boundary.
+
+The remaining production lifecycle is intentionally outside the candidate scope:
+
+```text
+scheduled refresh
+      ↓
+compare with current snapshot
+      ↓
+human-readable change report
+      ↓
+maintainer review
+      ↓
+release new catalog version
+```
+
+These capabilities can be added later without changing the candidate-facing
+connector contract.

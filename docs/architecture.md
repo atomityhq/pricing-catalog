@@ -54,18 +54,44 @@ A released catalog should be deterministic for its version.
 
 If provider prices change, the update process should create a new catalog version rather than silently changing data inside an already-pinned dependency.
 
-## Future refresh pipeline
+## Refresh pipeline boundary
 
-The repository is intended to grow toward:
+The connector-to-snapshot portion of the refresh pipeline is part of the skeleton
+now. This is deliberate: candidate connectors must plug into the same pipeline
+that the eventual production refresh system will use.
+
+```text
+connector fetch + normalize
+      ↓
+generic validation
+      ↓
+deterministic ordering
+      ↓
+catalog snapshot
+```
+
+`Connector.Fetch` is the provider-specific fetch + normalization boundary.
+`internal/pipeline.BuildSnapshot` owns generic validation, deterministic ordering,
+and snapshot construction.
+
+Candidates must not:
+
+- write catalog snapshots directly;
+- create provider-specific persistence formats;
+- create provider-specific refresh mechanisms;
+- bypass `catalog.ValidateRecords`;
+- change the canonical schema merely to fit one provider.
+
+The following pieces remain maintainer-owned future work:
 
 ```text
 scheduled refresh
       ↓
-connector fetch
-      ↓
-normalize
+connector fetch + normalize
       ↓
 validate
+      ↓
+snapshot
       ↓
 compare with current snapshot
       ↓
@@ -76,4 +102,9 @@ maintainer review
 release new catalog version
 ```
 
-The complete automation is intentionally outside the candidate skeleton for now.
+The skeleton intentionally stops before scheduling, release automation, and
+provider refresh orchestration. Those components consume the snapshot pipeline;
+candidates do not implement them.
+
+
+See [`pipeline.md`](pipeline.md) for the current connector-to-snapshot contract and the future maintainer lifecycle.

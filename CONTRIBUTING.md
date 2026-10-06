@@ -12,6 +12,9 @@ Thanks for contributing to `pricing-catalog`.
 - Add deterministic fixtures for non-trivial provider data.
 - Add regression tests for every parsing or normalization edge case you fix.
 - Document important assumptions and known limitations.
+- Treat `internal/pipeline` as the canonical path from connector output to a catalog snapshot.
+- Do not add provider-specific snapshot/update/persistence mechanisms.
+- Do not modify the canonical schema or consumer API just to fit one provider.
 
 ## Local checks
 
@@ -45,3 +48,10 @@ The pull request should explain:
 4. what information is intentionally not represented;
 5. what tests and fixtures were added;
 6. any known limitations.
+
+## Repository protection
+
+The repository is public, but the canonical framework is maintainer-owned.
+Configure the default branch so that pull requests require Code Owner approval
+and passing CI before merge. Replace the placeholder owner in `.github/CODEOWNERS`
+with the actual maintainer account/team.

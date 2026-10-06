@@ -1,0 +1,23 @@
+{
+  "provider": "example-cloud",
+  "products": [
+    {
+      "id": "vm-standard-2",
+      "name": "Standard VM",
+      "sku": "vm-standard-2",
+      "region": "eu-west",
+      "unit": "hour",
+      "currency": "EUR",
+      "price": "0.0800"
+    },
+    {
+      "id": "vm-standard-2",
+      "name": "Standard VM",
+      "sku": "vm-standard-2",
+      "region": "eu-central",
+      "unit": "hour",
+      "currency": "EUR",
+      "price": "0.0850"
+    }
+  ]
+}

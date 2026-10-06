@@ -23,12 +23,43 @@ connectors/<provider>/
 
 Your assigned provider is supplied separately with the assignment.
 
+## Contribution boundary
+
+Your contribution is the **provider connector** and the supporting fixtures,
+tests, and documentation for that connector.
+
+Do not implement a separate catalog/update architecture.
+
+In particular, do not:
+
+- write catalog snapshots directly;
+- add provider-specific persistence;
+- add provider-specific scheduling;
+- add a separate refresh mechanism;
+- bypass the generic validation pipeline;
+- change the canonical schema simply to fit the assigned provider;
+- change the consumer API unless explicitly requested.
+
+The repository already defines the pipeline boundary that your connector will
+eventually plug into:
+
+```text
+connector fetch + normalization
+        ↓
+generic validation
+        ↓
+deterministic snapshot creation
+```
+
+Use the existing connector testkit. It runs your connector through this pipeline.
+
 ### 1. Understand the existing code
 
 Before coding, review:
 
 - `pkg/catalog`
 - `pkg/connector`
+- `internal/pipeline`
 - `connectors/example-simple`
 - `connectors/example-complex`
 - `docs/schema.md`
@@ -83,6 +114,10 @@ Do not change the canonical schema or consumer API simply to fit the provider. I
 Your connector must have deterministic tests.
 
 Add representative provider fixtures under your connector's `testdata/` directory.
+
+Use `pkg/connector/testkit.AssertConnectorContract` as the baseline connector
+test. This ensures the connector is exercised through the generic catalog
+validation and snapshot-building pipeline.
 
 At minimum, cover the important pricing cases that you discovered during research. Depending on the provider, that may include:
 
