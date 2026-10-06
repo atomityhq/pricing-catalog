@@ -1,0 +1,48 @@
+#!/bin/sh
+# Pre-push checks: deliberately light — no builds, no tests (those run at commit time,
+# see pre-commit). Only quick guards that also catch commits made with --no-verify.
+# Bypass in an emergency with `git push --no-verify` (or SKIP_HOOKS=1).
+set -eu
+set -f
+IFS='
+'
+
+[ "${SKIP_HOOKS:-0}" = "1" ] && exit 0
+
+fail() {
+  printf '\n\033[31m✖ pre-push: %s\033[0m\n' "$1" >&2
+  exit 1
+}
+
+zero=0000000000000000000000000000000000000000
+# Git passes one line per ref being pushed: <local ref> <local sha> <remote ref> <remote sha>
+while IFS=' ' read -r local_ref local_sha remote_ref remote_sha; do
+  [ "$local_sha" = "$zero" ] && continue # deleting a branch: nothing to check
+
+  # main is protected: changes reach it through pull requests only.
+  case "$remote_ref" in
+    refs/heads/main | refs/heads/master)
+      fail "pushing directly to ${remote_ref#refs/heads/} isn't allowed — push a branch and open a pull request." ;;
+  esac
+
+  # The commits being pushed: everything not on the remote yet.
+  if [ "$remote_sha" = "$zero" ]; then
+    range=$(git rev-list "$local_sha" --not --remotes 2>/dev/null || true)
+  else
+    range=$(git rev-list "$remote_sha..$local_sha")
+  fi
+  [ -z "$range" ] && continue
+  oldest=$(printf '%s\n' "$range" | tail -n 1)
+  base=$(git rev-parse --verify --quiet "$oldest^" || git hash-object -t tree /dev/null)
+
+  files=$(git diff --name-only --diff-filter=ACMR "$base" "$local_sha")
+  env_files=$(printf '%s\n' "$files" | grep -E '(^|/)\.env(\.[^/]*)?$' | grep -v '\.example$' || true)
+  [ -n "$env_files" ] && fail "environment file(s) in the commits being pushed:
+$env_files"
+
+  added=$(git diff -U0 --diff-filter=ACMR "$base" "$local_sha" | grep -E '^\+' || true)
+  printf '%s\n' "$added" | grep -qE -- '-----BEGIN ([A-Z]+ )?PRIVATE KEY-----' && fail "a private key is in the commits being pushed."
+  printf '%s\n' "$added" | grep -qE '^\+(<<<<<<< |>>>>>>> )' && fail "merge-conflict markers in the commits being pushed."
+done
+
+printf '\033[32m✔ pre-push checks passed\033[0m\n'

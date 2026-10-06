@@ -1,0 +1,32 @@
+name: Security hardening or question (public)
+description: Non-sensitive security topics only. Real vulnerabilities must be reported privately.
+title: "security: "
+labels: ["security"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Stop — this issue would be public
+
+        **Never describe an exploitable vulnerability in a public issue.** Report it privately instead:
+        **[Report a vulnerability privately](https://github.com/atomityhq/pricing-catalog/security/advisories/new)** — only the maintainers can see it.
+        See [SECURITY.md](../blob/main/SECURITY.md) for what to include. We aim to respond within 3 working days.
+
+        Use this form only for **non-sensitive** security topics: hardening suggestions, dependency update requests,
+        or questions about the security model.
+
+  - type: textarea
+    id: topic
+    attributes:
+      label: Security topic (non-sensitive)
+      description: A hardening idea, an outdated dependency, or a question. No exploit details.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This is NOT an exploitable vulnerability. Real vulnerabilities are reported privately.
+          required: true

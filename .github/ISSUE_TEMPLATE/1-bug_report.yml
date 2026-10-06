@@ -1,0 +1,94 @@
+name: Bug report
+description: Something doesn't work the way it should, or the catalog has a wrong price.
+title: "bug: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this! Please search [existing issues](../issues) first.
+        **Security problem?** Don't file it here — report it privately (see SECURITY.md).
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug. For a wrong price, include the provider, SKU, region and the value you see.
+      placeholder: The catalog lists example-cloud vm-small in eu-west at 0.0120 USD/hour; the provider's price list says 0.0105.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps, query or code that shows the problem.
+      placeholder: |
+        1. Load the snapshot with catalog.LoadJSON
+        2. Query c.Prices(catalog.PriceQuery{Provider: "example-cloud", Region: "eu-west"})
+        3. See the price for vm-small
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: For a wrong price, link the authoritative provider source.
+      placeholder: 0.0105 USD/hour, per https://example-cloud.com/pricing
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Pricing data (wrong, missing or outdated price)
+        - Provider connector
+        - Canonical model / validation
+        - Consumer API (pkg/catalog queries)
+        - CLI (cmd/pricing-catalog)
+        - Build / CI / setup
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: provider
+    attributes:
+      label: Provider
+      description: The cloud provider or connector involved, if any.
+      placeholder: example-cloud
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: The library version you depend on, or the output of `git rev-parse --short HEAD`.
+      placeholder: v0.1.0 or 8cfd1a8
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        - Go version: 1.25
+        - OS: Ubuntu 24.04
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and output
+      description: Error messages, test output or validation errors. **Remove any secrets or API keys first.**
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this hasn't been reported yet.
+          required: true
+        - label: I removed passwords, API keys and other secrets from what I pasted.
+          required: true

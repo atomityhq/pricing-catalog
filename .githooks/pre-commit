@@ -1,0 +1,80 @@
+#!/bin/sh
+# Pre-commit checks: the full verification (gofmt, go vet, tests), run only when the
+# commit touches Go code, fixtures or snapshots. pre-push stays light because this runs here.
+# Bypass in an emergency with `git commit --no-verify` (or SKIP_HOOKS=1).
+set -eu
+# File lists are split on newlines only, and never glob-expanded.
+set -f
+IFS='
+'
+
+[ "${SKIP_HOOKS:-0}" = "1" ] && exit 0
+
+root=$(git rev-parse --show-toplevel)
+cd "$root"
+
+staged=$(git diff --cached --name-only --diff-filter=ACMR)
+[ -z "$staged" ] && exit 0
+
+fail() {
+  printf '\n\033[31m✖ pre-commit: %s\033[0m\n' "$1" >&2
+  exit 1
+}
+step() {
+  printf '\033[36m▸ %s\033[0m\n' "$1"
+}
+
+# ── Repository hygiene ────────────────────────────────────────────────────
+step "Checking staged files"
+
+# Real environment files hold secrets; only the *.example templates belong in git.
+env_files=$(printf '%s\n' "$staged" | grep -E '(^|/)\.env(\.[^/]*)?$' | grep -v '\.example$' || true)
+[ -n "$env_files" ] && fail "environment file(s) staged — these hold secrets:
+$env_files
+Unstage with: git restore --staged <file>"
+
+# Private keys and leftover merge-conflict markers, in the staged content itself.
+if git diff --cached -U0 --diff-filter=ACMR | grep -E '^\+' | grep -qE -- '-----BEGIN ([A-Z]+ )?PRIVATE KEY-----'; then
+  fail "a private key is being committed."
+fi
+if git diff --cached -U0 --diff-filter=ACMR | grep -E '^\+' | grep -qE '^\+(<<<<<<< |>>>>>>> |=======$)'; then
+  fail "merge-conflict markers in staged changes (<<<<<<< / ======= / >>>>>>>)."
+fi
+
+# Large files bloat the history forever. Provider fixtures should be trimmed to representative records.
+max_bytes=$((5 * 1024 * 1024))
+for file in $staged; do
+  size=$(git cat-file -s ":$file" 2>/dev/null || echo 0)
+  [ "$size" -gt "$max_bytes" ] && fail "$file is $((size / 1024 / 1024)) MB — files over 5 MB don't belong in git (trim fixtures to representative records)."
+done
+
+# ── Go ────────────────────────────────────────────────────────────────────
+go_files=$(printf '%s\n' "$staged" | grep -E '\.go$' || true)
+# Fixtures, snapshots and module files aren't Go source but can still break the tests.
+go_other=$(printf '%s\n' "$staged" | grep -E '(^go\.(mod|sum)$|/testdata/|^catalog/snapshots/|^pkg/catalog/data/)' || true)
+if [ -n "$go_files" ] || [ -n "$go_other" ]; then
+  command -v go >/dev/null 2>&1 || fail "Go isn't installed or not on PATH — see go.mod for the required version."
+fi
+if [ -n "$go_files" ]; then
+  step "Go: gofmt on staged files"
+  # shellcheck disable=SC2086
+  unformatted=$(gofmt -l $go_files)
+  [ -n "$unformatted" ] && fail "these files aren't gofmt-formatted (run: make fmt):
+$unformatted"
+fi
+# go vet/test fail on a module with no packages yet, so skip them until there are some.
+if { [ -n "$go_files" ] || [ -n "$go_other" ]; } && [ -n "$(go list ./... 2>/dev/null)" ]; then
+  step "Go: vet"
+  go vet ./... || fail "go vet found problems."
+  step "Go: tests"
+  # Quiet on success; on failure, show the end of the output, where the failing test is reported.
+  test_log=$(mktemp)
+  if ! go test ./... >"$test_log" 2>&1; then
+    tail -n 60 "$test_log" >&2
+    rm -f "$test_log"
+    fail "tests failed (run: go test ./...)."
+  fi
+  rm -f "$test_log"
+fi
+
+printf '\033[32m✔ pre-commit checks passed\033[0m\n'

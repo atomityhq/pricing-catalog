@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest a new feature, a new provider, or an improvement.
+title: "feat: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the idea! Clear problems are easier to act on than solutions alone, so start with the "why".
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and what makes it hard today?
+      placeholder: I need committed-use prices for a provider, but the catalog only has on-demand records…
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What you'd like to happen. API sketches and links to provider pricing sources are welcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches or workarounds you've tried.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - New provider connector
+        - Existing connector
+        - Canonical schema
+        - Consumer API (queries)
+        - CLI
+        - Snapshots / catalog refresh
+        - Developer experience / setup
+        - Other
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I'd be willing to open a pull request for this.

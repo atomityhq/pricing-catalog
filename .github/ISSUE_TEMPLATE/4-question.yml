@@ -1,0 +1,34 @@
+name: Question or discussion
+description: Ask how something works, or start a discussion about a topic.
+title: "question: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: Ask anything about using, running or contributing to the project. For bugs and feature ideas, please use those forms instead.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options:
+        - Question — I need help with something
+        - Discussion — I'd like to talk through an idea or design
+    validations:
+      required: true
+
+  - type: input
+    id: topic
+    attributes:
+      label: Topic
+      placeholder: Mapping committed-use discounts to the canonical model
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What you want to know or discuss, and any context — what you've tried, links, code.
+    validations:
+      required: true
