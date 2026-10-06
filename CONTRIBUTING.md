@@ -25,7 +25,7 @@ make validate-example
 
 ## Git hooks
 
-Checks run automatically before you commit and push. Turn them on once after cloning:
+Optional local hooks catch common mistakes before you commit and push. They are a developer convenience; CI is the authoritative check. Turn them on once after cloning:
 
 ```bash
 make hooks
@@ -33,7 +33,7 @@ make hooks
 
 | Hook | When | What it checks |
 |------|------|----------------|
-| `pre-commit` | `git commit` | No `.env` files, private keys, conflict markers or files over 5 MB. When Go code, `go.mod`/`go.sum`, `testdata/` fixtures or snapshots are staged: `gofmt` on staged Go files, `go vet ./...` and `go test ./...`. |
+| `pre-commit` | `git commit` | No `.env` files, private keys, conflict markers or files over 5 MB. When Go code, `go.mod`/`go.sum`, `testdata/` fixtures or snapshots are staged, it also runs `gofmt` on those Go files, `go vet ./...` and `go test ./...` — against the working tree, not the staged snapshot, so treat it as a quick sanity check. |
 | `pre-push` | `git push` | Light, about a second: refuses direct pushes to `main`, and re-checks the outgoing commits for `.env` files, private keys and conflict markers (in case a commit skipped its hook). No builds or tests. |
 
 The hooks live in `.githooks/`. To skip them once, in an emergency, use `--no-verify` (or `SKIP_HOOKS=1`).
@@ -72,7 +72,6 @@ The repository is public, but the canonical framework is maintainer-owned.
 Configure the default branch so that pull requests require Code Owner approval
 and passing CI before merge. Replace the placeholder owner in `.github/CODEOWNERS`
 with the actual maintainer account/team.
-
 
 ## Reporting bugs and ideas
 

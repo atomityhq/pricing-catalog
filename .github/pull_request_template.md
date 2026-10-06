@@ -46,15 +46,17 @@ Closes #
 - [ ] The PR title follows `type: short summary` (`feat`, `fix`, `docs`, `chore`, `refactor`, …)
 
 **Tests**
-- [ ] `make check` passes (gofmt, `go vet`, `go test ./...`) — or the pre-commit hook ran it
+- [ ] `make check` passes (gofmt, `go vet`, `go test ./...`)
 - [ ] `make validate-example` passes
 - [ ] I added or updated tests that cover this change
 - [ ] Every parsing or normalization edge case I fixed has a regression test
 - [ ] Non-trivial provider data has deterministic fixtures under `testdata/`
 
 **Code**
-- [ ] The git hooks ran on my commits (no `--no-verify`)
+- [ ] I ran the repository checks locally before submitting.
 - [ ] No floating-point numbers for catalog prices
+- [ ] My connector uses the existing connector → normalization → validation → snapshot pipeline.
+- [ ] I did not introduce provider-specific snapshot, persistence, or refresh logic.
 - [ ] Provider-specific behaviour stays inside the connector; the canonical schema and consumer API are unchanged (or the change is proposed in `DESIGN.md`)
 - [ ] No secrets, API keys or personal data in code, logs or fixtures
 

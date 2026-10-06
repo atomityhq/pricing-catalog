@@ -1,6 +1,10 @@
 #!/bin/sh
-# Pre-commit checks: the full verification (gofmt, go vet, tests), run only when the
-# commit touches Go code, fixtures or snapshots. pre-push stays light because this runs here.
+# Pre-commit checks — a developer convenience, not a correctness gate. CI is authoritative.
+#
+# The hygiene checks (.env files, private keys, conflict markers, file size) inspect the
+# staged content. The Go checks (gofmt, go vet, go test) are a quick sanity pass that runs on
+# the working tree when the commit touches Go code, fixtures or snapshots, so unstaged edits
+# can affect their result.
 # Bypass in an emergency with `git commit --no-verify` (or SKIP_HOOKS=1).
 set -eu
 # File lists are split on newlines only, and never glob-expanded.
@@ -48,7 +52,7 @@ for file in $staged; do
   [ "$size" -gt "$max_bytes" ] && fail "$file is $((size / 1024 / 1024)) MB — files over 5 MB don't belong in git (trim fixtures to representative records)."
 done
 
-# ── Go ────────────────────────────────────────────────────────────────────
+# ── Go (working tree; CI is the real check) ───────────────────────────────
 go_files=$(printf '%s\n' "$staged" | grep -E '\.go$' || true)
 # Fixtures, snapshots and module files aren't Go source but can still break the tests.
 go_other=$(printf '%s\n' "$staged" | grep -E '(^go\.(mod|sum)$|/testdata/|^catalog/snapshots/|^pkg/catalog/data/)' || true)
@@ -56,7 +60,7 @@ if [ -n "$go_files" ] || [ -n "$go_other" ]; then
   command -v go >/dev/null 2>&1 || fail "Go isn't installed or not on PATH — see go.mod for the required version."
 fi
 if [ -n "$go_files" ]; then
-  step "Go: gofmt on staged files"
+  step "Go: gofmt (working-tree copies of staged files)"
   # shellcheck disable=SC2086
   unformatted=$(gofmt -l $go_files)
   [ -n "$unformatted" ] && fail "these files aren't gofmt-formatted (run: make fmt):
