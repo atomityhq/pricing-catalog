@@ -1,0 +1,63 @@
+{
+  "pricing": {
+    "currency": "EUR",
+    "server_types": [
+      {
+        "id": 1,
+        "name": "cx23",
+        "prices": [
+          {
+            "location": "fsn1",
+            "price_hourly": {
+              "net": "0.0088",
+              "gross": "0.010472"
+            },
+            "price_monthly": {
+              "net": "5.49",
+              "gross": "6.5331"
+            }
+          },
+          {
+            "location": "hel1",
+            "price_hourly": {
+              "net": "0.0088",
+              "gross": "0.010472"
+            },
+            "price_monthly": {
+              "net": "5.49",
+              "gross": "6.5331"
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "cpx11",
+        "prices": [
+          {
+            "location": "fsn1",
+            "price_hourly": {
+              "net": "0.0096",
+              "gross": "0.011424"
+            },
+            "price_monthly": {
+              "net": "5.99",
+              "gross": "7.1281"
+            }
+          },
+          {
+            "location": "ash",
+            "price_hourly": {
+              "net": "0.0328",
+              "gross": "0.039032"
+            },
+            "price_monthly": {
+              "net": "20.49",
+              "gross": "24.3831"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
