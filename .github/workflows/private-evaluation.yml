@@ -1,0 +1,151 @@
+name: Private Evaluation
+
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "Evaluation task ID"
+        required: true
+        type: string
+      ref:
+        description: "Candidate branch, tag, or commit SHA"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  evaluate:
+    name: Evaluate candidate
+    runs-on: ubuntu-latest
+    environment: private-evaluation
+
+    steps:
+      - name: Checkout candidate
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 1
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Prepare private evaluation data
+        env:
+          PRIVATE_EVAL_DATA: ${{ secrets.PRIVATE_EVAL_DATA }}
+        run: |
+          set -euo pipefail
+
+          test -n "$PRIVATE_EVAL_DATA"
+
+          mkdir -p "$RUNNER_TEMP/private-eval"
+          printf '%s' "$PRIVATE_EVAL_DATA" \
+            | base64 --decode \
+            | tar -xzf - -C "$RUNNER_TEMP/private-eval"
+
+      - name: Generate maintainer evaluation harness
+        run: |
+          set -euo pipefail
+
+          mkdir -p "$RUNNER_TEMP/evaluator"
+
+          cat > "$RUNNER_TEMP/evaluator/main.go" <<'EOF'
+          package main
+
+          import (
+              "context"
+              "fmt"
+              "io"
+              "os"
+              "path/filepath"
+              "time"
+
+              cloudservers "pricing-catalog/connectors/hetzner/cloud-servers"
+              "pricing-catalog/internal/evaluation/cases"
+              "pricing-catalog/internal/evaluation/runner"
+              "pricing-catalog/internal/evaluation/scoring"
+              "pricing-catalog/internal/pipeline"
+              "pricing-catalog/pkg/connector"
+          )
+
+          func main() {
+              evalDir := os.Getenv("PRIVATE_EVAL_DIR")
+
+              casesPath := filepath.Join(
+                  evalDir,
+                  "hetzner-cloud-servers",
+                  "cases.yaml",
+              )
+
+              file, err := os.Open(casesPath)
+              if err != nil {
+                  panic(err)
+              }
+              defer file.Close()
+
+              suite, err := cases.Load(file)
+              if err != nil {
+                  panic(err)
+              }
+
+              fixtureDir := filepath.Join(
+                  evalDir,
+                  "hetzner-cloud-servers",
+                  "fixtures",
+              )
+
+              results, err := runner.RunSuite(
+                  context.Background(),
+                  suite,
+                  fixtureDir,
+                  func(r io.Reader) connector.Connector {
+                      return cloudservers.New(r)
+                  },
+                  pipeline.BuildOptions{
+                      Version:     "private-evaluation",
+                      GeneratedAt: time.Now().UTC(),
+                  },
+              )
+              if err != nil {
+                  panic(err)
+              }
+
+              report := scoring.Score(results)
+
+              for _, result := range results {
+                  if result.Passed {
+                      fmt.Printf("PASS %s\n", result.CaseID)
+                  } else {
+                      fmt.Printf("FAIL %s: %v\n", result.CaseID, result.Error)
+                  }
+              }
+
+              fmt.Printf(
+                  "Automated score: %d/%d (%.1f%%)\n",
+                  report.Passed,
+                  report.Total,
+                  report.Score,
+              )
+
+              if report.Failed > 0 {
+                  os.Exit(1)
+              }
+          }
+          EOF
+
+      - name: Run private evaluation
+        env:
+          PRIVATE_EVAL_DIR: ${{ runner.temp }}/private-eval
+        run: |
+           set -euo pipefail
+           go run "$RUNNER_TEMP/evaluator/main.go"
+
+
+      - name: Remove private evaluation data
+        if: always()
+        run: |
+          rm -rf "$RUNNER_TEMP/evaluator"
