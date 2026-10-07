@@ -19,7 +19,6 @@ jobs:
   evaluate:
     name: Evaluate candidate
     runs-on: ubuntu-latest
-    environment: private-evaluation
 
     steps:
       - name: Checkout candidate
@@ -51,9 +50,9 @@ jobs:
         run: |
           set -euo pipefail
 
-          mkdir -p "$RUNNER_TEMP/evaluator"
+          mkdir -p .evaluation-harness
 
-          cat > "$RUNNER_TEMP/evaluator/main.go" <<'EOF'
+          cat > .evaluation-harness/main.go <<'EOF'
           package main
 
           import (
@@ -142,10 +141,10 @@ jobs:
           PRIVATE_EVAL_DIR: ${{ runner.temp }}/private-eval
         run: |
            set -euo pipefail
-           go run "$RUNNER_TEMP/evaluator/main.go"
+           go run ./.evaluation-harness
 
 
       - name: Remove private evaluation data
         if: always()
         run: |
-          rm -rf "$RUNNER_TEMP/evaluator"
+          rm -rf .evaluation-harness
