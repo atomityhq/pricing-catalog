@@ -90,6 +90,42 @@ Demonstrates:
 
 This is the more important example for the candidate assignment.
 
+## Directory convention
+
+All production provider/service connectors MUST use:
+
+    connectors/<provider>/<service>/
+
+Examples:
+
+    connectors/aws/ec2/
+    connectors/aws/s3/
+    connectors/gcp/compute/
+    connectors/azure/virtual-machines/
+
+Directory names MUST:
+
+- use lowercase characters;
+- use hyphens for word separators;
+- identify the provider at the first level;
+- identify the provider pricing service/domain at the second level.
+
+Provider-only connector directories are not permitted. For example:
+
+    connectors/aws/
+
+must not contain a connector implementation directly.
+
+The repository does not contain empty directories for future connectors.
+The directory is created when the corresponding connector is implemented.
+
+The following are intentional exceptions:
+
+    connectors/example-simple/
+    connectors/example-complex/
+
+These are framework examples rather than provider/service connectors.
+
 ## Network access
 
 The example connectors use fixtures so the default test suite is deterministic.

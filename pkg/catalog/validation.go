@@ -85,24 +85,24 @@ func ValidateRecords(records []PricingRecord) error {
 	return nil
 }
 
+type identity struct {
+	Provider          string            `json:"provider"`
+	Product           string            `json:"product"`
+	SKU               string            `json:"sku"`
+	ProviderProductID string            `json:"provider_product_id,omitempty"`
+	ProviderSKUID     string            `json:"provider_sku_id,omitempty"`
+	Region            string            `json:"region"`
+	PurchaseModel     string            `json:"purchase_model"`
+	BillingUnit       string            `json:"billing_unit"`
+	PricingDimension  string            `json:"pricing_dimension"`
+	Dimensions        map[string]string `json:"dimensions,omitempty"`
+	Tier              string            `json:"tier,omitempty"`
+	EffectiveFrom     string            `json:"effective_from,omitempty"`
+	EffectiveTo       string            `json:"effective_to,omitempty"`
+}
+
 // RecordKey returns the stable identity of a pricing record within a snapshot.
 func RecordKey(r PricingRecord) string {
-	type identity struct {
-		Provider          string            `json:"provider"`
-		Product           string            `json:"product"`
-		SKU               string            `json:"sku"`
-		ProviderProductID string            `json:"provider_product_id,omitempty"`
-		ProviderSKUID     string            `json:"provider_sku_id,omitempty"`
-		Region            string            `json:"region"`
-		PurchaseModel     string            `json:"purchase_model"`
-		BillingUnit       string            `json:"billing_unit"`
-		PricingDimension  string            `json:"pricing_dimension"`
-		Dimensions        map[string]string `json:"dimensions,omitempty"`
-		Tier              string            `json:"tier,omitempty"`
-		EffectiveFrom     string            `json:"effective_from,omitempty"`
-		EffectiveTo       string            `json:"effective_to,omitempty"`
-	}
-
 	key, _ := json.Marshal(identity{
 		Provider:          r.Provider,
 		Product:           r.Product,

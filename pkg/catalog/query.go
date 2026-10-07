@@ -2,6 +2,7 @@ package catalog
 
 import (
 	"errors"
+	"maps"
 	"sort"
 	"time"
 )
@@ -126,14 +127,12 @@ func cloneRecords(records []PricingRecord) []PricingRecord {
 
 func cloneMap(in map[string]string) map[string]string {
 	out := make(map[string]string, len(in))
-	for key, value := range in {
-		out[key] = value
-	}
+	maps.Copy(out, in)
 	return out
 }
 
 func SortRecords(records []PricingRecord) {
-	sort.Slice(records, func(i, j int) bool {
+	sort.SliceStable(records, func(i, j int) bool {
 		return RecordKey(records[i]) < RecordKey(records[j])
 	})
 }

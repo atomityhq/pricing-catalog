@@ -1,25 +1,26 @@
 package examplecomplex
 
 import (
+	"bytes"
 	"os"
 	"path/filepath"
 	"testing"
 
+	"pricing-catalog/pkg/connector"
 	"pricing-catalog/pkg/connector/testkit"
 )
 
 func TestConnectorContract(t *testing.T) {
-	path := filepath.Join("testdata", "source.json")
-	file, err := os.Open(path)
-	if err != nil {
-		t.Fatal(err)
-	}
-	defer file.Close()
+	newConnector := func() connector.Connector {
+		data, err := os.ReadFile(filepath.Join("testdata", "source.json"))
+		if err != nil {
+			t.Fatalf("read fixture: %v", err)
+		}
 
-	records := testkit.AssertConnectorContract(t, New(file))
-	if len(records) != 3 {
-		t.Fatalf("expected 3 records, got %d", len(records))
+		return New(bytes.NewReader(data))
 	}
+
+	records := testkit.AssertConnectorContract(t, newConnector)
 
 	var onDemand, committed int
 	var tiered int

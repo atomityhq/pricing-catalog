@@ -8,20 +8,24 @@ You are extending the real open-source library, not a toy project. Your connecto
 
 ## Timebox
 
-- Expected effort: **6–10 hours**
 - Submission window: **7 calendar days**
 
 Please do not spend the full week working continuously. The timebox is intended to give you flexibility around your schedule.
 
 ## Your task
 
-Implement a new connector under:
+Create your connector under:
 
-```text
-connectors/<provider>/
-```
+    connectors/<provider>/<service>/
 
-Your assigned provider is supplied separately with the assignment.
+For example, an AWS EC2 assignment must be implemented under:
+
+    connectors/aws/ec2/
+
+The provider directory identifies the cloud provider. The service directory
+identifies the provider pricing domain being implemented.
+
+Do not place connector implementations directly under the provider directory.
 
 ## Contribution boundary
 

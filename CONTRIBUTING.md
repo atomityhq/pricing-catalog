@@ -53,6 +53,25 @@ connectors/<provider>/
 
 The split between files is up to the contributor. Keep the architecture understandable rather than creating abstractions for their own sake.
 
+## Connector directory structure
+
+Provider connectors must follow this structure:
+
+    connectors/<provider>/<service>/
+
+For example:
+
+    connectors/aws/ec2/
+
+Do not create provider-level implementations such as:
+
+    connectors/aws/
+
+The provider/service directory should be created as part of the connector
+implementation; empty placeholder directories are not maintained.
+
+Use lowercase names and hyphens for multi-word provider or service names.
+
 ## Pull requests
 
 The pull request should explain:
