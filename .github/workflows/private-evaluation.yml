@@ -41,10 +41,15 @@ jobs:
 
           test -n "$PRIVATE_EVAL_DATA"
 
+          rm -rf "$RUNNER_TEMP/private-eval"
           mkdir -p "$RUNNER_TEMP/private-eval"
+
           printf '%s' "$PRIVATE_EVAL_DATA" \
             | base64 --decode \
             | tar -xzf - -C "$RUNNER_TEMP/private-eval"
+
+          echo "Private evaluation files:"
+          find "$RUNNER_TEMP/private-eval" -maxdepth 4 -type f -print
 
       - name: Generate maintainer evaluation harness
         run: |
@@ -135,6 +140,13 @@ jobs:
               }
           }
           EOF
+
+      - name: Validate private evaluation data
+        run: |
+          set -euo pipefail
+
+          test -f "$RUNNER_TEMP/private-eval/hetzner-cloud-servers/cases.yaml"
+          test -f "$RUNNER_TEMP/private-eval/hetzner-cloud-servers/fixtures/pricing.json"
 
       - name: Run private evaluation
         env:
