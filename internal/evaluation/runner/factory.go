@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"io"
-	"os"
 	"path/filepath"
 
 	"pricing-catalog/internal/evaluation/cases"
@@ -51,16 +50,6 @@ func RunSuite(
 		}
 
 		fixturePath := filepath.Join(fixtureDir, testCase.Input.Fixture)
-		file, err := os.Open(fixturePath)
-		if err != nil {
-			return nil, fmt.Errorf(
-				"open fixture %q: %w",
-				fixturePath,
-				err,
-			)
-		}
-
-		connector := factory(file)
 
 		caseSuite := &cases.Suite{
 			Version: suite.Version,
@@ -70,22 +59,16 @@ func RunSuite(
 
 		caseResults, runErr := Run(
 			ctx,
-			connector,
+			factory,
 			caseSuite,
+			fixturePath,
 			options,
 		)
 
-		closeErr := file.Close()
 		if runErr != nil {
 			return nil, runErr
 		}
-		if closeErr != nil {
-			return nil, fmt.Errorf(
-				"close fixture %q: %w",
-				fixturePath,
-				closeErr,
-			)
-		}
+
 		if len(caseResults) != 1 {
 			return nil, fmt.Errorf(
 				"case %q: expected one result, got %d",

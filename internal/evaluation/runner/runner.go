@@ -3,10 +3,10 @@ package runner
 import (
 	"context"
 	"fmt"
+	"os"
 	"pricing-catalog/internal/evaluation/cases"
 	"pricing-catalog/internal/pipeline"
 	"pricing-catalog/pkg/catalog"
-	"pricing-catalog/pkg/connector"
 	"reflect"
 	"time"
 )
@@ -22,12 +22,23 @@ type Result struct {
 	Error  error
 }
 
-func Run(ctx context.Context, c connector.Connector, suite *cases.Suite, options pipeline.BuildOptions) ([]Result, error) {
+func Run(
+	ctx context.Context,
+	factory Factory,
+	suite *cases.Suite,
+	fixturePath string,
+	options pipeline.BuildOptions,
+) ([]Result, error) {
 	if suite == nil {
 		return nil, fmt.Errorf("evaluation suite is nil")
 	}
 
-	snapshot, buildErr := pipeline.BuildSnapshot(ctx, c, options)
+	snapshot, buildErr := buildFromFixture(
+		ctx,
+		factory,
+		fixturePath,
+		options,
+	)
 	results := make([]Result, 0, len(suite.Cases))
 
 	for _, testCase := range suite.Cases {
@@ -49,7 +60,13 @@ func Run(ctx context.Context, c connector.Connector, suite *cases.Suite, options
 		}
 
 		if testCase.Expect.Deterministic {
-			if err := checkDeterministic(ctx, c, options, snapshot); err != nil {
+			if err := checkDeterministic(
+				ctx,
+				factory,
+				fixturePath,
+				options,
+				snapshot,
+			); err != nil {
 				result.Error = err
 				results = append(results, result)
 				continue
@@ -72,11 +89,17 @@ func Run(ctx context.Context, c connector.Connector, suite *cases.Suite, options
 
 func checkDeterministic(
 	ctx context.Context,
-	c connector.Connector,
+	factory Factory,
+	fixturePath string,
 	options pipeline.BuildOptions,
 	first catalog.Snapshot,
 ) error {
-	second, err := pipeline.BuildSnapshot(ctx, c, options)
+	second, err := buildFromFixture(
+		ctx,
+		factory,
+		fixturePath,
+		options,
+	)
 	if err != nil {
 		return fmt.Errorf("second deterministic build failed: %w", err)
 	}
@@ -258,4 +281,21 @@ func sameTime(a, b *time.Time) bool {
 		return a == b
 	}
 	return a.Equal(*b)
+}
+
+func buildFromFixture(
+	ctx context.Context,
+	factory Factory,
+	fixturePath string,
+	options pipeline.BuildOptions,
+) (catalog.Snapshot, error) {
+	file, err := os.Open(fixturePath)
+	if err != nil {
+		return catalog.Snapshot{}, fmt.Errorf("open fixture %q: %w", fixturePath, err)
+	}
+	defer file.Close()
+
+	c := factory(file)
+
+	return pipeline.BuildSnapshot(ctx, c, options)
 }
