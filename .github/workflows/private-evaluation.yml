@@ -52,108 +52,34 @@ jobs:
           find "$RUNNER_TEMP/private-eval" -maxdepth 4 -type f -print
 
       - name: Generate maintainer evaluation harness
+        env:
+          PRIVATE_EVAL_DIR: ${{ runner.temp }}/private-eval
+          TASK: ${{ inputs.task }}
         run: |
           set -euo pipefail
+
+          test -f "$PRIVATE_EVAL_DIR/$TASK/evaluator.go"
 
           mkdir -p .evaluation-harness
-
-          cat > .evaluation-harness/main.go <<'EOF'
-          package main
-
-          import (
-              "context"
-              "fmt"
-              "io"
-              "os"
-              "path/filepath"
-              "time"
-
-              cloudservers "pricing-catalog/connectors/hetzner/cloud-servers"
-              "pricing-catalog/internal/evaluation/cases"
-              "pricing-catalog/internal/evaluation/runner"
-              "pricing-catalog/internal/evaluation/scoring"
-              "pricing-catalog/internal/pipeline"
-              "pricing-catalog/pkg/connector"
-          )
-
-          func main() {
-              evalDir := os.Getenv("PRIVATE_EVAL_DIR")
-
-              casesPath := filepath.Join(
-                  evalDir,
-                  "hetzner-cloud-servers",
-                  "cases.yaml",
-              )
-
-              file, err := os.Open(casesPath)
-              if err != nil {
-                  panic(err)
-              }
-              defer file.Close()
-
-              suite, err := cases.Load(file)
-              if err != nil {
-                  panic(err)
-              }
-
-              fixtureDir := filepath.Join(
-                  evalDir,
-                  "hetzner-cloud-servers",
-                  "fixtures",
-              )
-
-              results, err := runner.RunSuite(
-                  context.Background(),
-                  suite,
-                  fixtureDir,
-                  func(r io.Reader) connector.Connector {
-                      return cloudservers.New(r)
-                  },
-                  pipeline.BuildOptions{
-                      Version:     "private-evaluation",
-                      GeneratedAt: time.Now().UTC(),
-                  },
-              )
-              if err != nil {
-                  panic(err)
-              }
-
-              report := scoring.Score(results)
-
-              for _, result := range results {
-                  if result.Passed {
-                      fmt.Printf("PASS %s\n", result.CaseID)
-                  } else {
-                      fmt.Printf("FAIL %s: %v\n", result.CaseID, result.Error)
-                  }
-              }
-
-              fmt.Printf(
-                  "Automated score: %d/%d (%.1f%%)\n",
-                  report.Passed,
-                  report.Total,
-                  report.Score,
-              )
-
-              if report.Failed > 0 {
-                  os.Exit(1)
-              }
-          }
-          EOF
+          cp "$PRIVATE_EVAL_DIR/$TASK/evaluator.go" \
+            .evaluation-harness/main.go
 
       - name: Validate private evaluation data
+        env:
+          TASK: ${{ inputs.task }}
         run: |
           set -euo pipefail
 
-          test -f "$RUNNER_TEMP/private-eval/hetzner-cloud-servers/cases.yaml"
-          test -f "$RUNNER_TEMP/private-eval/hetzner-cloud-servers/fixtures/pricing.json"
+          test -f "$RUNNER_TEMP/private-eval/$TASK/cases.yaml"
+          test -d "$RUNNER_TEMP/private-eval/$TASK/fixtures"
+          test -f "$RUNNER_TEMP/private-eval/$TASK/evaluator.go"
 
       - name: Run private evaluation
         env:
           PRIVATE_EVAL_DIR: ${{ runner.temp }}/private-eval
         run: |
-           set -euo pipefail
-           go run ./.evaluation-harness
+          set -euo pipefail
+          go run ./.evaluation-harness
 
 
       - name: Remove private evaluation data
