@@ -1,0 +1,1560 @@
+{
+  "formatVersion": "v1.0",
+  "disclaimer": "This pricing list is for informational purposes only. All prices are subject to the additional terms included in the pricing pages on http://aws.amazon.com. All Free Tier prices are also subject to the terms included at https://aws.amazon.com/free/",
+  "offerCode": "AmazonS3",
+  "version": "20261015173540",
+  "publicationDate": "2026-10-15T17:35:40Z",
+  "products": {
+    "WP9ANXZGBYYSGJEA": {
+      "sku": "WP9ANXZGBYYSGJEA",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "99.99%",
+        "storageClass": "General Purpose",
+        "volumeType": "Standard",
+        "usagetype": "TimedStorage-ByteHrs",
+        "operation": "",
+        "durability": "99.999999999%",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "T5CD4UDRVV44YE2T": {
+      "sku": "T5CD4UDRVV44YE2T",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "N/A",
+        "storageClass": "Intelligent-Tiering",
+        "volumeType": "Intelligent-Tiering Frequent Access",
+        "usagetype": "TimedStorage-INT-FA-ByteHrs",
+        "operation": "",
+        "durability": "N/A",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "M7WA952JTYFHTE64": {
+      "sku": "M7WA952JTYFHTE64",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "N/A",
+        "storageClass": "Intelligent-Tiering",
+        "volumeType": "Intelligent-Tiering Infrequent Access",
+        "usagetype": "TimedStorage-INT-IA-ByteHrs",
+        "operation": "",
+        "durability": "N/A",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "J5H5J7F2H2NJEZZN": {
+      "sku": "J5H5J7F2H2NJEZZN",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "N/A",
+        "storageClass": "Intelligent-Tiering",
+        "volumeType": "Intelligent-Tiering Archive Instant Access",
+        "usagetype": "TimedStorage-INT-AIA-ByteHrs",
+        "operation": "",
+        "durability": "N/A",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "UDS7BPFBC39U3TCH": {
+      "sku": "UDS7BPFBC39U3TCH",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "N/A",
+        "storageClass": "Intelligent-Tiering",
+        "volumeType": "IntelligentTieringArchiveAccess",
+        "usagetype": "TimedStorage-INT-AA-ByteHrs",
+        "operation": "",
+        "durability": "N/A",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "82TFRVR9729PGTNP": {
+      "sku": "82TFRVR9729PGTNP",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "N/A",
+        "storageClass": "Intelligent-Tiering",
+        "volumeType": "IntelligentTieringDeepArchiveAccess",
+        "usagetype": "TimedStorage-INT-DAA-ByteHrs",
+        "operation": "",
+        "durability": "N/A",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "379GYJUQ5WFBUYGM": {
+      "sku": "379GYJUQ5WFBUYGM",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "99.9%",
+        "storageClass": "Infrequent Access",
+        "volumeType": "Standard - Infrequent Access",
+        "usagetype": "TimedStorage-SIA-ByteHrs",
+        "operation": "",
+        "durability": "99.999999999%",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "KRY2B57FKTA8GJW7": {
+      "sku": "KRY2B57FKTA8GJW7",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "99.5%",
+        "storageClass": "Infrequent Access",
+        "volumeType": "One Zone - Infrequent Access",
+        "usagetype": "TimedStorage-ZIA-ByteHrs",
+        "operation": "",
+        "durability": "99.999999999%",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "NMJQ7TNW84EMBGZM": {
+      "sku": "NMJQ7TNW84EMBGZM",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "99.9%",
+        "storageClass": "Archive Instant Retrieval",
+        "volumeType": "Glacier Instant Retrieval",
+        "usagetype": "TimedStorage-GIR-ByteHrs",
+        "operation": "",
+        "durability": "99.999999999%",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "ZGASJWMFVH7NM8RK": {
+      "sku": "ZGASJWMFVH7NM8RK",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "N/A",
+        "storageClass": "Archive",
+        "volumeType": "Amazon Glacier",
+        "usagetype": "TimedStorage-GlacierByteHrs",
+        "operation": "",
+        "durability": "99.999999999%",
+        "overhead": "Staging Storage 1",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "EXB3YJ6YV5CRH4JN": {
+      "sku": "EXB3YJ6YV5CRH4JN",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "99.99%",
+        "storageClass": "Archive",
+        "volumeType": "Glacier Deep Archive",
+        "usagetype": "TimedStorage-GDA-Staging",
+        "operation": "",
+        "durability": "99.999999999%",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "CFF4F5FZYKV2GKYD": {
+      "sku": "CFF4F5FZYKV2GKYD",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "99.9%",
+        "storageClass": "High Performance",
+        "volumeType": "Express One Zone",
+        "usagetype": "TimedStorage-XZ-ByteHrs",
+        "operation": "",
+        "durability": "99.999999999%",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "M9D34X8ZHECCKKRU": {
+      "sku": "M9D34X8ZHECCKKRU",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "99.99%",
+        "storageClass": "Non-Critical Data",
+        "volumeType": "Reduced Redundancy",
+        "usagetype": "TimedStorage-RRS-ByteHrs",
+        "operation": "",
+        "durability": "99.99%",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "E9YHNFENF4XQBZR6": {
+      "sku": "E9YHNFENF4XQBZR6",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-Tier1",
+        "groupDescription": "PUT/COPY/POST or LIST requests",
+        "usagetype": "Requests-Tier1",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "ZWQ6Q48CRJXX4FXE": {
+      "sku": "ZWQ6Q48CRJXX4FXE",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-Tier2",
+        "groupDescription": "GET and all other requests",
+        "usagetype": "Requests-Tier2",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "FNYHUPR3T466JJYM": {
+      "sku": "FNYHUPR3T466JJYM",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-SIA-Tier1",
+        "groupDescription": "PUT/COPY/POST or LIST requests to Standard-Infrequent Access",
+        "usagetype": "Requests-SIA-Tier1",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "GWU4HUHFNSRYMYNK": {
+      "sku": "GWU4HUHFNSRYMYNK",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-SIA-Tier2",
+        "groupDescription": "GET and all other requests  to Standard-Infrequent Access",
+        "usagetype": "Requests-SIA-Tier2",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "YAXYB5WAVB7U5BRN": {
+      "sku": "YAXYB5WAVB7U5BRN",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-GIR-Tier1",
+        "groupDescription": "PUT/COPY/POST or LIST requests to Glacier Instant Retrieval",
+        "usagetype": "Requests-GIR-Tier1",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "6WKRC2AMC45PNCVZ": {
+      "sku": "6WKRC2AMC45PNCVZ",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-GIR-Tier2",
+        "groupDescription": "GET and all other requests to Glacier Instant Retrieval",
+        "usagetype": "Requests-GIR-Tier2",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "GQYN2VTWYJQVTWHQ": {
+      "sku": "GQYN2VTWYJQVTWHQ",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-Tier3",
+        "groupDescription": "Lifecycle Transition Requests into Glacier Deep Archive",
+        "usagetype": "Requests-Tier3",
+        "operation": "S3-GDATransition",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "7Q8ZATUMRNWEPNWW": {
+      "sku": "7Q8ZATUMRNWEPNWW",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-Tier4",
+        "groupDescription": "Lifecycle Transition Requests into One Zone-Infrequent Access",
+        "usagetype": "Requests-Tier4",
+        "operation": "S3-ZIATransition",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "PGJ6CQV6AFUUNQTU": {
+      "sku": "PGJ6CQV6AFUUNQTU",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-Tier5",
+        "groupDescription": "Bulk Glacier Restore Requests",
+        "usagetype": "Requests-Tier5",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "UZVPN9AWBCUHZHXM": {
+      "sku": "UZVPN9AWBCUHZHXM",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-Tier6",
+        "groupDescription": "Expedited Glacier Restore Requests",
+        "usagetype": "Requests-Tier6",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "GYFVHK3TN2PTQJ6T": {
+      "sku": "GYFVHK3TN2PTQJ6T",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-Tier8",
+        "groupDescription": "Access Grants Requests-DeleteAGLocation",
+        "usagetype": "Requests-Tier8",
+        "operation": "DeleteAGLocation",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "7594RTQEE8ND34GA": {
+      "sku": "7594RTQEE8ND34GA",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-SIA-Retrieval",
+        "groupDescription": "Object Retrieval in Standard-Infrequent Access",
+        "usagetype": "Retrieval-SIA",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "2C7JEQ54QWYYWGZ6": {
+      "sku": "2C7JEQ54QWYYWGZ6",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-ZIA-Retrieval",
+        "groupDescription": "Object Retrieval in One Zone-Infrequent Access",
+        "usagetype": "Retrieval-ZIA",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "CN3DWKRWAMMHWCA3": {
+      "sku": "CN3DWKRWAMMHWCA3",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-GIR-Retrieval",
+        "groupDescription": "Object Retrieval in Glacier Instant Retrieval",
+        "usagetype": "Retrieval-GIR",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "DJVU2QGWTTYMPVET": {
+      "sku": "DJVU2QGWTTYMPVET",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "feeCode": "S3-Bulk-Retrieval",
+        "feeDescription": "Fee for Bulk Retrieval of data stored",
+        "usagetype": "Bulk-Retrieval-Bytes",
+        "operation": "RestoreObject",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "26TUJV6FNGAN44UY": {
+      "sku": "26TUJV6FNGAN44UY",
+      "productFamily": "API Request",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "S3-API-GIR-Select-Returned",
+        "groupDescription": "Data Returned by S3 Select in Glacier Instant Retrieval",
+        "usagetype": "Select-Returned-GIR-Bytes",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "26EY5Q656QEFV8J2": {
+      "sku": "26EY5Q656QEFV8J2",
+      "productFamily": "Fee",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "feeCode": "S3:EarlyDelete-SIA",
+        "feeDescription": "Pro-rated fee for objects deleted before 30 days in Standard-Infrequent Access volume",
+        "usagetype": "EarlyDelete-SIA",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "YQHTRZZKTT737SRB": {
+      "sku": "YQHTRZZKTT737SRB",
+      "productFamily": "Fee",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "feeCode": "S3:EarlyDelete-ZIA",
+        "feeDescription": "Pro-rated fee for objects deleted before 30 days in One Zone-Infrequent Access volume",
+        "usagetype": "EarlyDelete-ZIA",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "GCDNDUMKKKSY8SH8": {
+      "sku": "GCDNDUMKKKSY8SH8",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "feeCode": "S3:EarlyDelete-GIR",
+        "feeDescription": "Pro-rated fee for objects deleted before 90 days in Glacier Instant Retrieval volume",
+        "usagetype": "EarlyDelete-GIR",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "AVHPNKWHP35GZ5ZH": {
+      "sku": "AVHPNKWHP35GZ5ZH",
+      "productFamily": "Fee",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "feeCode": "Glacier:EarlyDelete",
+        "feeDescription": "Pro-rated fee for deleting items prior to 90 days",
+        "usagetype": "EarlyDelete-ByteHrs",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "PWNMYRK4GT93REV7": {
+      "sku": "PWNMYRK4GT93REV7",
+      "productFamily": "Fee",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "feeCode": "S3-StorageLens",
+        "feeDescription": "Per object fee for objects included in Storage Lens",
+        "usagetype": "USE1-StorageLens-ObjCount",
+        "operation": "StorageLens",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "GV4UH3C2SAN3EC98": {
+      "sku": "GV4UH3C2SAN3EC98",
+      "productFamily": "Fee",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "feeCode": "S3-Inventory-ObjectsListed",
+        "feeDescription": "Per object fee for objects listed in an Inventory",
+        "usagetype": "Inventory-ObjectsListed",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "7QBV9HJJ2HYT34GG": {
+      "sku": "7QBV9HJJ2HYT34GG",
+      "productFamily": "Fee",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "feeCode": "S3-Analytics-ObjectCount",
+        "feeDescription": "Per object fee for objects included in Analytics",
+        "usagetype": "StorageAnalytics-ObjCount",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "G76SDFUV63NSS6N2": {
+      "sku": "G76SDFUV63NSS6N2",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "availability": "N/A",
+        "storageClass": "Tags",
+        "volumeType": "Tags",
+        "usagetype": "TagStorage-TagHrs",
+        "operation": "",
+        "durability": "N/A",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "JS698V37SA2BFFYW": {
+      "sku": "JS698V37SA2BFFYW",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "feeCode": "S3-BatchOperations-Jobs",
+        "feeDescription": "Per job fee for Batch Operations jobs",
+        "usagetype": "BatchOperations-Jobs",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    },
+    "VFSW6ADYJ5NS2Z6P": {
+      "sku": "VFSW6ADYJ5NS2Z6P",
+      "attributes": {
+        "servicecode": "AmazonS3",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "feeCode": "S3-BatchOperations-Objects",
+        "feeDescription": "Per object fee for object operations performed by Batch Operations",
+        "usagetype": "BatchOperations-Objects",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Simple Storage Service"
+      }
+    }
+  },
+  "terms": {
+    "OnDemand": {
+      "WP9ANXZGBYYSGJEA": {
+        "WP9ANXZGBYYSGJEA.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "WP9ANXZGBYYSGJEA",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "WP9ANXZGBYYSGJEA.JRTCKXETXF.PGHJ3S3EYE": {
+              "rateCode": "WP9ANXZGBYYSGJEA.JRTCKXETXF.PGHJ3S3EYE",
+              "description": "$0.023 per GB - first 50 TB / month of storage used",
+              "beginRange": "0",
+              "endRange": "51200",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0230000000"
+              },
+              "appliesTo": []
+            },
+            "WP9ANXZGBYYSGJEA.JRTCKXETXF.D42MF2PVJS": {
+              "rateCode": "WP9ANXZGBYYSGJEA.JRTCKXETXF.D42MF2PVJS",
+              "description": "$0.022 per GB - next 450 TB / month of storage used",
+              "beginRange": "51200",
+              "endRange": "512000",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0220000000"
+              },
+              "appliesTo": []
+            },
+            "WP9ANXZGBYYSGJEA.JRTCKXETXF.PXJDJ3YRG3": {
+              "rateCode": "WP9ANXZGBYYSGJEA.JRTCKXETXF.PXJDJ3YRG3",
+              "description": "$0.021 per GB - storage used / month over 500 TB",
+              "beginRange": "512000",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0210000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "T5CD4UDRVV44YE2T": {
+        "T5CD4UDRVV44YE2T.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "T5CD4UDRVV44YE2T",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "T5CD4UDRVV44YE2T.JRTCKXETXF.PGHJ3S3EYE": {
+              "rateCode": "T5CD4UDRVV44YE2T.JRTCKXETXF.PGHJ3S3EYE",
+              "description": "$0.023 per GB - first 50 TB / month of storage used in Intelligent-Tiering, Frequent Access Tier",
+              "beginRange": "0",
+              "endRange": "51200",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0230000000"
+              },
+              "appliesTo": []
+            },
+            "T5CD4UDRVV44YE2T.JRTCKXETXF.D42MF2PVJS": {
+              "rateCode": "T5CD4UDRVV44YE2T.JRTCKXETXF.D42MF2PVJS",
+              "description": "$0.022 per GB - next 450 TB / month of storage used in Intelligent-Tiering, Frequent Access Tier",
+              "beginRange": "51200",
+              "endRange": "512000",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0220000000"
+              },
+              "appliesTo": []
+            },
+            "T5CD4UDRVV44YE2T.JRTCKXETXF.PXJDJ3YRG3": {
+              "rateCode": "T5CD4UDRVV44YE2T.JRTCKXETXF.PXJDJ3YRG3",
+              "description": "$0.021 per GB - over 500 TB / month of storage used in Intelligent-Tiering, Frequent Access Tier",
+              "beginRange": "512000",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0210000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "M7WA952JTYFHTE64": {
+        "M7WA952JTYFHTE64.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "M7WA952JTYFHTE64",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "M7WA952JTYFHTE64.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "M7WA952JTYFHTE64.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.0125 per GB-Month of storage used in Intelligent-Tiering, Infrequent Access Tier",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0125000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "J5H5J7F2H2NJEZZN": {
+        "J5H5J7F2H2NJEZZN.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "J5H5J7F2H2NJEZZN",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "J5H5J7F2H2NJEZZN.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "J5H5J7F2H2NJEZZN.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.004 per GB-Month of storage used in Intelligent-Tiering, Archive Instant Access tier",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0040000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "UDS7BPFBC39U3TCH": {
+        "UDS7BPFBC39U3TCH.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "UDS7BPFBC39U3TCH",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "UDS7BPFBC39U3TCH.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "UDS7BPFBC39U3TCH.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.0036 per Gigabyte Month for TimedStorage-INT-AA-ByteHrs:IntelligentTieringAAStorage in US East (N. Virginia)",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0036000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "82TFRVR9729PGTNP": {
+        "82TFRVR9729PGTNP.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "82TFRVR9729PGTNP",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "82TFRVR9729PGTNP.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "82TFRVR9729PGTNP.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.00099 per Gigabyte Month for TimedStorage-INT-DAA-ByteHrs:IntelligentTieringDAAStorage in US East (N. Virginia)",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0009900000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "379GYJUQ5WFBUYGM": {
+        "379GYJUQ5WFBUYGM.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "379GYJUQ5WFBUYGM",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "379GYJUQ5WFBUYGM.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "379GYJUQ5WFBUYGM.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.0125 per GB-Month of storage used in Standard-Infrequent Access",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0125000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "KRY2B57FKTA8GJW7": {
+        "KRY2B57FKTA8GJW7.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "KRY2B57FKTA8GJW7",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "KRY2B57FKTA8GJW7.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "KRY2B57FKTA8GJW7.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.01 per GB-Month of storage used in One Zone-Infrequent Access",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0100000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "NMJQ7TNW84EMBGZM": {
+        "NMJQ7TNW84EMBGZM.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "NMJQ7TNW84EMBGZM",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "NMJQ7TNW84EMBGZM.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "NMJQ7TNW84EMBGZM.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.004 per GB-Month of storage used in Glacier Instant Retrieval",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0040000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "ZGASJWMFVH7NM8RK": {
+        "ZGASJWMFVH7NM8RK.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "ZGASJWMFVH7NM8RK",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "ZGASJWMFVH7NM8RK.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "ZGASJWMFVH7NM8RK.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.0036 per GB / month of storage used - Amazon Glacier",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0036000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "EXB3YJ6YV5CRH4JN": {
+        "EXB3YJ6YV5CRH4JN.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "EXB3YJ6YV5CRH4JN",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "EXB3YJ6YV5CRH4JN.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "EXB3YJ6YV5CRH4JN.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.021 per GB-Month of storage used in GlacierStagingStorage",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0210000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "CFF4F5FZYKV2GKYD": {
+        "CFF4F5FZYKV2GKYD.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "CFF4F5FZYKV2GKYD",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "CFF4F5FZYKV2GKYD.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "CFF4F5FZYKV2GKYD.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.11 per GB-Mo of Storage in Express One Zone ",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.1100000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "M9D34X8ZHECCKKRU": {
+        "M9D34X8ZHECCKKRU.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "M9D34X8ZHECCKKRU",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "M9D34X8ZHECCKKRU.JRTCKXETXF.6YNURZBX9Y": {
+              "rateCode": "M9D34X8ZHECCKKRU.JRTCKXETXF.6YNURZBX9Y",
+              "description": "$0.0240 per GB - first 1 TB / month of storage used - Reduced Redundancy Storage",
+              "beginRange": "0",
+              "endRange": "1024",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0240000000"
+              },
+              "appliesTo": []
+            },
+            "M9D34X8ZHECCKKRU.JRTCKXETXF.QUZRP4P8Y4": {
+              "rateCode": "M9D34X8ZHECCKKRU.JRTCKXETXF.QUZRP4P8Y4",
+              "description": "$0.0236 per GB - next 49 TB / month of storage used - Reduced Redundancy Storage",
+              "beginRange": "1024",
+              "endRange": "51200",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0236000000"
+              },
+              "appliesTo": []
+            },
+            "M9D34X8ZHECCKKRU.JRTCKXETXF.D42MF2PVJS": {
+              "rateCode": "M9D34X8ZHECCKKRU.JRTCKXETXF.D42MF2PVJS",
+              "description": "$0.0232 per GB - next 450 TB / month of storage used - Reduced Redundancy Storage",
+              "beginRange": "51200",
+              "endRange": "512000",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0232000000"
+              },
+              "appliesTo": []
+            },
+            "M9D34X8ZHECCKKRU.JRTCKXETXF.YJ98HAVVPP": {
+              "rateCode": "M9D34X8ZHECCKKRU.JRTCKXETXF.YJ98HAVVPP",
+              "description": "$0.0228 per GB - next 500 TB / month of storage used - Reduced Redundancy Storage",
+              "beginRange": "512000",
+              "endRange": "1024000",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0228000000"
+              },
+              "appliesTo": []
+            },
+            "M9D34X8ZHECCKKRU.JRTCKXETXF.J25EHUHHDK": {
+              "rateCode": "M9D34X8ZHECCKKRU.JRTCKXETXF.J25EHUHHDK",
+              "description": "$0.0224 per GB - next 4000 TB / month of storage used - Reduced Redundancy Storage",
+              "beginRange": "1024000",
+              "endRange": "5120000",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0224000000"
+              },
+              "appliesTo": []
+            },
+            "M9D34X8ZHECCKKRU.JRTCKXETXF.JR3K5QW8G3": {
+              "rateCode": "M9D34X8ZHECCKKRU.JRTCKXETXF.JR3K5QW8G3",
+              "description": "$0.0220 per GB - storage used /  month over 5000 TB - Reduced Redundancy Storage",
+              "beginRange": "5120000",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0220000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "E9YHNFENF4XQBZR6": {
+        "E9YHNFENF4XQBZR6.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "E9YHNFENF4XQBZR6",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "E9YHNFENF4XQBZR6.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "E9YHNFENF4XQBZR6.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.005 per 1,000 PUT, COPY, POST, or LIST requests",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Requests",
+              "pricePerUnit": {
+                "USD": "0.0000050000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "ZWQ6Q48CRJXX4FXE": {
+        "ZWQ6Q48CRJXX4FXE.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "ZWQ6Q48CRJXX4FXE",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "ZWQ6Q48CRJXX4FXE.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "ZWQ6Q48CRJXX4FXE.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.004 per 10,000 GET and all other requests",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Requests",
+              "pricePerUnit": {
+                "USD": "0.0000004000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "FNYHUPR3T466JJYM": {
+        "FNYHUPR3T466JJYM.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "FNYHUPR3T466JJYM",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "FNYHUPR3T466JJYM.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "FNYHUPR3T466JJYM.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.01 per 1,000 PUT, COPY, POST or LIST requests to Standard-Infrequent Access",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Requests",
+              "pricePerUnit": {
+                "USD": "0.0000100000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "GWU4HUHFNSRYMYNK": {
+        "GWU4HUHFNSRYMYNK.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "GWU4HUHFNSRYMYNK",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "GWU4HUHFNSRYMYNK.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "GWU4HUHFNSRYMYNK.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.01 per 10,000 GET and all other requests  to Standard-Infrequent Access",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Requests",
+              "pricePerUnit": {
+                "USD": "0.0000010000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "YAXYB5WAVB7U5BRN": {
+        "YAXYB5WAVB7U5BRN.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "YAXYB5WAVB7U5BRN",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "YAXYB5WAVB7U5BRN.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "YAXYB5WAVB7U5BRN.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.02 per 1,000 PUT, COPY, POST or LIST requests to Glacier Instant Retrieval",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Requests",
+              "pricePerUnit": {
+                "USD": "0.0000200000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "6WKRC2AMC45PNCVZ": {
+        "6WKRC2AMC45PNCVZ.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "6WKRC2AMC45PNCVZ",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "6WKRC2AMC45PNCVZ.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "6WKRC2AMC45PNCVZ.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.1 per 10,000 GET and all other requests to Glacier Instant Retrieval",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Requests",
+              "pricePerUnit": {
+                "USD": "0.0000100000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "GQYN2VTWYJQVTWHQ": {
+        "GQYN2VTWYJQVTWHQ.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "GQYN2VTWYJQVTWHQ",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "GQYN2VTWYJQVTWHQ.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "GQYN2VTWYJQVTWHQ.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.05 per 1,000 Lifecycle requests to Glacier Deep Archive in US East (N. Virginia)",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Requests",
+              "pricePerUnit": {
+                "USD": "0.0000500000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "7Q8ZATUMRNWEPNWW": {
+        "7Q8ZATUMRNWEPNWW.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "7Q8ZATUMRNWEPNWW",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "7Q8ZATUMRNWEPNWW.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "7Q8ZATUMRNWEPNWW.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.01 per 1,000 transitions to One Zone-Infrequent Access",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Requests",
+              "pricePerUnit": {
+                "USD": "0.0000100000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "PGJ6CQV6AFUUNQTU": {
+        "PGJ6CQV6AFUUNQTU.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "PGJ6CQV6AFUUNQTU",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "PGJ6CQV6AFUUNQTU.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "PGJ6CQV6AFUUNQTU.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.00 per 1,000 - Bulk Glacier requests",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Requests",
+              "pricePerUnit": {
+                "USD": "0.0000000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "UZVPN9AWBCUHZHXM": {
+        "UZVPN9AWBCUHZHXM.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "UZVPN9AWBCUHZHXM",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "UZVPN9AWBCUHZHXM.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "UZVPN9AWBCUHZHXM.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.01 per Expedited Glacier request",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Requests",
+              "pricePerUnit": {
+                "USD": "0.0100000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "GYFVHK3TN2PTQJ6T": {
+        "GYFVHK3TN2PTQJ6T.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "GYFVHK3TN2PTQJ6T",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "GYFVHK3TN2PTQJ6T.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "GYFVHK3TN2PTQJ6T.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.00 per 1,000 DeleteAGLocation requests for S3 Access Grants",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Requests",
+              "pricePerUnit": {
+                "USD": "0.0000000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "7594RTQEE8ND34GA": {
+        "7594RTQEE8ND34GA.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "7594RTQEE8ND34GA",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "7594RTQEE8ND34GA.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "7594RTQEE8ND34GA.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.01 per GB - flat fee for all bytes retrieved in Standard-Infrequent Access",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB",
+              "pricePerUnit": {
+                "USD": "0.0100000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "2C7JEQ54QWYYWGZ6": {
+        "2C7JEQ54QWYYWGZ6.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "2C7JEQ54QWYYWGZ6",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "2C7JEQ54QWYYWGZ6.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "2C7JEQ54QWYYWGZ6.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.01 per GB - flat fee for all bytes retrieved in One Zone-Infrequent Access",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB",
+              "pricePerUnit": {
+                "USD": "0.0100000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "CN3DWKRWAMMHWCA3": {
+        "CN3DWKRWAMMHWCA3.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "CN3DWKRWAMMHWCA3",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "CN3DWKRWAMMHWCA3.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "CN3DWKRWAMMHWCA3.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.03 per GB - flat fee for all bytes retrieved in Glacier Instant Retrieval",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB",
+              "pricePerUnit": {
+                "USD": "0.0300000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "DJVU2QGWTTYMPVET": {
+        "DJVU2QGWTTYMPVET.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "DJVU2QGWTTYMPVET",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "DJVU2QGWTTYMPVET.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "DJVU2QGWTTYMPVET.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.00 per GB - Bulk retrieval",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB",
+              "pricePerUnit": {
+                "USD": "0.0000000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "26TUJV6FNGAN44UY": {
+        "26TUJV6FNGAN44UY.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "26TUJV6FNGAN44UY",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "26TUJV6FNGAN44UY.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "26TUJV6FNGAN44UY.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.03 per GB - for bytes returned by S3 Select in Glacier Instant Retrieval",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB",
+              "pricePerUnit": {
+                "USD": "0.0300000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "26EY5Q656QEFV8J2": {
+        "26EY5Q656QEFV8J2.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "26EY5Q656QEFV8J2",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "26EY5Q656QEFV8J2.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "26EY5Q656QEFV8J2.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.0125 per GB-Month prorated for objects deleted or overwritten before 30 days in Standard-Infrequent Access",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0125000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "YQHTRZZKTT737SRB": {
+        "YQHTRZZKTT737SRB.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "YQHTRZZKTT737SRB",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "YQHTRZZKTT737SRB.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "YQHTRZZKTT737SRB.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.01 per GB-Month prorated for objects deleted or overwritten before 30 days in One Zone-Infrequent Access",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0100000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "GCDNDUMKKKSY8SH8": {
+        "GCDNDUMKKKSY8SH8.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "GCDNDUMKKKSY8SH8",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "GCDNDUMKKKSY8SH8.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "GCDNDUMKKKSY8SH8.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.004 per GB-Month prorated for objects deleted or overwritten before 90 days in Glacier Instant Retrieval",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0040000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "AVHPNKWHP35GZ5ZH": {
+        "AVHPNKWHP35GZ5ZH.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "AVHPNKWHP35GZ5ZH",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "AVHPNKWHP35GZ5ZH.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "AVHPNKWHP35GZ5ZH.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.0036 per GB/month prorated for Glacier Early Delete",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0036000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "PWNMYRK4GT93REV7": {
+        "PWNMYRK4GT93REV7.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "PWNMYRK4GT93REV7",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "PWNMYRK4GT93REV7.JRTCKXETXF.E4EFPBSQ6U": {
+              "rateCode": "PWNMYRK4GT93REV7.JRTCKXETXF.E4EFPBSQ6U",
+              "description": "$0.20 per MM objects per monthfor the first 25B objects for Storage Lens to US East (N. Virginia)",
+              "beginRange": "0",
+              "endRange": "25000000000",
+              "unit": "Objects",
+              "pricePerUnit": {
+                "USD": "0.0000002000"
+              },
+              "appliesTo": []
+            },
+            "PWNMYRK4GT93REV7.JRTCKXETXF.VZVC66HZSM": {
+              "rateCode": "PWNMYRK4GT93REV7.JRTCKXETXF.VZVC66HZSM",
+              "description": "$0.16 per MM objects per month for 25B to 100B objects for Storage Lens to US East (N. Virginia)",
+              "beginRange": "25000000000",
+              "endRange": "100000000000",
+              "unit": "Objects",
+              "pricePerUnit": {
+                "USD": "0.0000001600"
+              },
+              "appliesTo": []
+            },
+            "PWNMYRK4GT93REV7.JRTCKXETXF.WQM8VUGNUA": {
+              "rateCode": "PWNMYRK4GT93REV7.JRTCKXETXF.WQM8VUGNUA",
+              "description": "$0.12 per MM objects per month for 100B+ objects for Storage Lens to US East (N. Virginia)",
+              "beginRange": "100000000000",
+              "endRange": "Inf",
+              "unit": "Objects",
+              "pricePerUnit": {
+                "USD": "0.0000001200"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "GV4UH3C2SAN3EC98": {
+        "GV4UH3C2SAN3EC98.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "GV4UH3C2SAN3EC98",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "GV4UH3C2SAN3EC98.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "GV4UH3C2SAN3EC98.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.0025 per 1 million objects listed in S3 Inventory",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Objects",
+              "pricePerUnit": {
+                "USD": "0.0000000025"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "7QBV9HJJ2HYT34GG": {
+        "7QBV9HJJ2HYT34GG.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "7QBV9HJJ2HYT34GG",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "7QBV9HJJ2HYT34GG.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "7QBV9HJJ2HYT34GG.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.10 per 1 million objects monitored in S3 Analytics",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Objects",
+              "pricePerUnit": {
+                "USD": "0.0000001000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "G76SDFUV63NSS6N2": {
+        "G76SDFUV63NSS6N2.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "G76SDFUV63NSS6N2",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "G76SDFUV63NSS6N2.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "G76SDFUV63NSS6N2.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.0065 per 10,000 Tags per month ",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Tag-Mo",
+              "pricePerUnit": {
+                "USD": "0.0000006500"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "JS698V37SA2BFFYW": {
+        "JS698V37SA2BFFYW.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "JS698V37SA2BFFYW",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "JS698V37SA2BFFYW.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "JS698V37SA2BFFYW.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.25 per job fee for Batch Operations",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Jobs",
+              "pricePerUnit": {
+                "USD": "0.2500000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "VFSW6ADYJ5NS2Z6P": {
+        "VFSW6ADYJ5NS2Z6P.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "VFSW6ADYJ5NS2Z6P",
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "priceDimensions": {
+            "VFSW6ADYJ5NS2Z6P.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "VFSW6ADYJ5NS2Z6P.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$1.00 per 1 million object operations performed by Batch Operations",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Objects",
+              "pricePerUnit": {
+                "USD": "0.0000010000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      }
+    }
+  }
+}
