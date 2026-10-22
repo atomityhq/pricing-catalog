@@ -6,6 +6,8 @@ difficulty: medium
 target_connector: connectors/aws/ec2/
 ---
 
+# COMPLETED
+
 # AWS EC2 Pricing Connector
 
 ## Assignment
