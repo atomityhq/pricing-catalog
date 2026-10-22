@@ -110,7 +110,7 @@ The public API is intentionally small. Consumers should query canonical data wit
 
 1. Pick or receive an assignment from [`tasks/`](tasks/). Each task lives in
    `tasks/<task-id>/TASK.md` and defines the provider, service, difficulty and
-   the connector directory you must implement.
+   the connector directory you must implement. Tasks marked as "COMPLETED" in their `TASK.md` and also in the available PRs should not be picked.
 2. Read the background docs, in this order:
    - [`docs/architecture.md`](docs/architecture.md)
    - [`docs/pipeline.md`](docs/pipeline.md)
