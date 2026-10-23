@@ -6,6 +6,8 @@ difficulty: medium
 target_connector: connectors/aws/lambda/
 ---
 
+# COMPLETED
+
 # AWS Lambda Pricing Connector
 
 ## Assignment
