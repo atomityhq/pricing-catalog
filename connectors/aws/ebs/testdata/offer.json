@@ -1,0 +1,252 @@
+{
+  "formatVersion": "v1.0",
+  "offerCode": "AmazonEC2",
+  "version": "20261001000000",
+  "products": {
+    "A-GP3": {
+      "sku": "A-GP3",
+      "productFamily": "Storage",
+      "attributes": {
+        "servicecode": "AmazonEC2",
+        "usagetype": "EBS:VolumeUsage.gp3",
+        "regionCode": "us-east-1",
+        "location": "us-east-1",
+        "locationType": "AWS Region",
+        "operation": "",
+        "volumeApiName": "gp3",
+        "volumeType": "General Purpose",
+        "storageMedia": "SSD-backed"
+      }
+    },
+    "B-IOPS": {
+      "sku": "B-IOPS",
+      "productFamily": "System Operation",
+      "attributes": {
+        "servicecode": "AmazonEC2",
+        "usagetype": "EU-EBS:VolumeP-IOPS.io2",
+        "regionCode": "eu-west-1",
+        "location": "eu-west-1",
+        "locationType": "AWS Region",
+        "operation": "",
+        "volumeApiName": "io2",
+        "volumeType": "Provisioned IOPS",
+        "storageMedia": "SSD-backed"
+      }
+    },
+    "C-THROUGHPUT": {
+      "sku": "C-THROUGHPUT",
+      "productFamily": "Provisioned Throughput",
+      "attributes": {
+        "servicecode": "AmazonEC2",
+        "usagetype": "EBS:VolumeP-Throughput.gp3",
+        "regionCode": "us-east-1",
+        "location": "us-east-1",
+        "locationType": "AWS Region",
+        "operation": "",
+        "volumeApiName": "gp3",
+        "volumeType": "General Purpose",
+        "storageMedia": "SSD-backed"
+      }
+    },
+    "D-SNAPSHOT": {
+      "sku": "D-SNAPSHOT",
+      "productFamily": "Storage Snapshot",
+      "attributes": {
+        "servicecode": "AmazonEC2",
+        "usagetype": "EBS:SnapshotUsage",
+        "regionCode": "us-east-1",
+        "location": "us-east-1",
+        "locationType": "AWS Region",
+        "operation": ""
+      }
+    },
+    "E-ARCHIVE": {
+      "sku": "E-ARCHIVE",
+      "productFamily": "Storage Snapshot",
+      "attributes": {
+        "servicecode": "AmazonEC2",
+        "usagetype": "EU-EBS:SnapshotArchiveStorage",
+        "regionCode": "eu-west-1",
+        "location": "eu-west-1",
+        "locationType": "AWS Region",
+        "operation": ""
+      }
+    },
+    "F-RESTORE": {
+      "sku": "F-RESTORE",
+      "productFamily": "Fast Snapshot Restore",
+      "attributes": {
+        "servicecode": "AmazonEC2",
+        "usagetype": "USE1-EBS:FastSnapshotRestore",
+        "regionCode": "us-east-1-bos-1",
+        "location": "us-east-1-bos-1",
+        "locationType": "AWS Local Zone",
+        "operation": ""
+      }
+    },
+    "G-COMPUTE": {
+      "sku": "G-COMPUTE",
+      "productFamily": "Compute Instance",
+      "attributes": {
+        "servicecode": "AmazonEC2",
+        "usagetype": "BoxUsage:t3.micro",
+        "regionCode": "us-east-1"
+      }
+    }
+  },
+  "terms": {
+    "OnDemand": {
+      "A-GP3": {
+        "A-GP3.JRTCKXETXF": {
+          "sku": "A-GP3",
+          "offerTermCode": "JRTCKXETXF",
+          "effectiveDate": "2026-10-01T05:00:00+05:00",
+          "priceDimensions": {
+            "A-GP3.JRTCKXETXF.1": {
+              "rateCode": "A-GP3.JRTCKXETXF.1",
+              "description": "Fixture price for EBS:VolumeUsage.gp3",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0800000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "B-IOPS": {
+        "B-IOPS.JRTCKXETXF": {
+          "sku": "B-IOPS",
+          "offerTermCode": "JRTCKXETXF",
+          "effectiveDate": "2026-10-01T05:00:00+05:00",
+          "priceDimensions": {
+            "B-IOPS.JRTCKXETXF.1": {
+              "rateCode": "B-IOPS.JRTCKXETXF.1",
+              "description": "Fixture price for EU-EBS:VolumeP-IOPS.io2",
+              "beginRange": "0",
+              "endRange": "32000",
+              "unit": "IOPS-Mo",
+              "pricePerUnit": {
+                "USD": "0.0650000000"
+              },
+              "appliesTo": []
+            },
+            "B-IOPS.JRTCKXETXF.2": {
+              "rateCode": "B-IOPS.JRTCKXETXF.2",
+              "description": "Fixture price for EU-EBS:VolumeP-IOPS.io2",
+              "beginRange": "32000",
+              "endRange": "64000",
+              "unit": "IOPS-Mo",
+              "pricePerUnit": {
+                "USD": "0.0460000000"
+              },
+              "appliesTo": []
+            },
+            "B-IOPS.JRTCKXETXF.3": {
+              "rateCode": "B-IOPS.JRTCKXETXF.3",
+              "description": "Fixture price for EU-EBS:VolumeP-IOPS.io2",
+              "beginRange": "64000",
+              "endRange": "Inf",
+              "unit": "IOPS-Mo",
+              "pricePerUnit": {
+                "USD": "0.0320000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "C-THROUGHPUT": {
+        "C-THROUGHPUT.JRTCKXETXF": {
+          "sku": "C-THROUGHPUT",
+          "offerTermCode": "JRTCKXETXF",
+          "effectiveDate": "2026-10-01T05:00:00+05:00",
+          "priceDimensions": {
+            "C-THROUGHPUT.JRTCKXETXF.1": {
+              "rateCode": "C-THROUGHPUT.JRTCKXETXF.1",
+              "description": "Fixture price for EBS:VolumeP-Throughput.gp3",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "MBps-Mo",
+              "pricePerUnit": {
+                "USD": "0.0400000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "D-SNAPSHOT": {
+        "D-SNAPSHOT.JRTCKXETXF": {
+          "sku": "D-SNAPSHOT",
+          "offerTermCode": "JRTCKXETXF",
+          "effectiveDate": "2026-10-01T05:00:00+05:00",
+          "priceDimensions": {
+            "D-SNAPSHOT.JRTCKXETXF.1": {
+              "rateCode": "D-SNAPSHOT.JRTCKXETXF.1",
+              "description": "Fixture price for EBS:SnapshotUsage",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0500000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "E-ARCHIVE": {
+        "E-ARCHIVE.JRTCKXETXF": {
+          "sku": "E-ARCHIVE",
+          "offerTermCode": "JRTCKXETXF",
+          "effectiveDate": "2026-10-01T05:00:00+05:00",
+          "priceDimensions": {
+            "E-ARCHIVE.JRTCKXETXF.1": {
+              "rateCode": "E-ARCHIVE.JRTCKXETXF.1",
+              "description": "Fixture price for EU-EBS:SnapshotArchiveStorage",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "GB-Mo",
+              "pricePerUnit": {
+                "USD": "0.0125000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "F-RESTORE": {
+        "F-RESTORE.JRTCKXETXF": {
+          "sku": "F-RESTORE",
+          "offerTermCode": "JRTCKXETXF",
+          "effectiveDate": "2026-10-01T05:00:00+05:00",
+          "priceDimensions": {
+            "F-RESTORE.JRTCKXETXF.1": {
+              "rateCode": "F-RESTORE.JRTCKXETXF.1",
+              "description": "Fixture price for USE1-EBS:FastSnapshotRestore",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "DSU-Hrs",
+              "pricePerUnit": {
+                "USD": "0.7500000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      }
+    },
+    "Reserved": {
+      "G-COMPUTE": {}
+    }
+  }
+}
