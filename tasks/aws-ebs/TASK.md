@@ -6,6 +6,8 @@ difficulty: easy
 target_connector: connectors/aws/ebs/
 ---
 
+# COMPLETED
+
 # Amazon EBS Pricing Connector
 
 ## Assignment
