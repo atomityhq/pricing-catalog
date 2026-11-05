@@ -5,6 +5,7 @@ service: s3
 difficulty: medium
 target_connector: connectors/aws/s3/
 ---
+# COMPLETED
 
 # Amazon S3 Pricing Connector
 
