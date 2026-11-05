@@ -5,6 +5,7 @@ service: compute-engine
 difficulty: medium
 target_connector: connectors/gcp/compute-engine/
 ---
+# COMPLETED
 
 # Google Compute Engine Pricing Connector
 
