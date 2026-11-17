@@ -3,6 +3,7 @@ package dynamodb
 import (
 	"encoding/json"
 	"fmt"
+
 	"pricing-catalog/pkg/catalog"
 )
 
@@ -78,24 +79,22 @@ func parseOffer(data []byte) ([]catalog.PricingRecord, error) {
 						if length := term.Attributes["LeaseContractLength"]; length != "" {
 							dimensions["lease_contract_length"] = length
 						}
+
 						records = append(records, catalog.PricingRecord{
 							Provider:         "aws",
 							Product:          "DynamoDB",
 							SKU:              sku,
 							ProviderSKUID:    sku,
 							Region:           product.Attributes["regionCode"],
-							PurchaseModel:    "on_demand",
+							PurchaseModel:    category.purchaseModel,
 							BillingUnit:      position.Unit,
 							PricingDimension: product.Attributes["usagetype"],
-							Dimensions: map[string]string{
-								"rate_code": rateCode,
-								"currency":  currency,
-							},
-							Price: catalog.Money{Amount: amount, Currency: currency},
-							Tier:  tier,
+							Dimensions:       dimensions,
+							Price:            catalog.Money{Amount: amount, Currency: currency},
+							Tier:             tier,
 							Source: catalog.Source{
 								Type: "aws_price_list",
-								URL:  "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonDynamoDB/current/us-east-1/index.json",
+								URL:  sourceURL,
 							},
 						})
 					}
