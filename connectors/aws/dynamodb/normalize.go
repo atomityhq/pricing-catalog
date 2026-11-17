@@ -17,10 +17,12 @@ type awsProduct struct {
 
 type awsTerms struct {
 	OnDemand map[string]json.RawMessage `json:"OnDemand"`
+	Reserved map[string]json.RawMessage `json:"Reserved"`
 }
 
 type awsTerm struct {
 	PriceDimension map[string]awsPriceDimension `json:"priceDimensions"`
+	Attributes     map[string]string            `json:"termAttributes"`
 }
 
 type awsPriceDimension struct {
@@ -37,48 +39,66 @@ func parseOffer(data []byte) ([]catalog.PricingRecord, error) {
 	}
 
 	var records []catalog.PricingRecord
-	for sku, termJSON := range offer.Terms.OnDemand {
-		product, ok := offer.Products[sku]
-		if !ok {
-			return nil, fmt.Errorf("SKU %s: missing product", sku)
-		}
 
-		var termsForSKU map[string]awsTerm
-		if err := json.Unmarshal(termJSON, &termsForSKU); err != nil {
-			return nil, fmt.Errorf("SKU %s: decode pricing terms: %w", sku, err)
-		}
+	categories := []struct {
+		purchaseModel string
+		prices        map[string]json.RawMessage
+	}{
+		{"on_demand", offer.Terms.OnDemand},
+		{"reserved", offer.Terms.Reserved},
+	}
 
-		for _, term := range termsForSKU {
-			for rateCode, position := range term.PriceDimension {
-				var tier *catalog.Tier
-				if position.BeginRange != "" {
-					tier = &catalog.Tier{StartQuantity: position.BeginRange}
-					if position.EndRange != "Inf" {
-						tier.EndQuantity = position.EndRange
+	for _, category := range categories {
+		for sku, termJSON := range category.prices {
+			product, ok := offer.Products[sku]
+			if !ok {
+				return nil, fmt.Errorf("SKU %s: missing product", sku)
+			}
+
+			var termsForSKU map[string]awsTerm
+			if err := json.Unmarshal(termJSON, &termsForSKU); err != nil {
+				return nil, fmt.Errorf("SKU %s: decode pricing terms: %w", sku, err)
+			}
+
+			for _, term := range termsForSKU {
+				for rateCode, position := range term.PriceDimension {
+					var tier *catalog.Tier
+					if position.BeginRange != "" {
+						tier = &catalog.Tier{StartQuantity: position.BeginRange}
+						if position.EndRange != "Inf" {
+							tier.EndQuantity = position.EndRange
+						}
 					}
-				}
 
-				for currency, amount := range position.PricePerUnit {
-					records = append(records, catalog.PricingRecord{
-						Provider:         "aws",
-						Product:          "DynamoDB",
-						SKU:              sku,
-						ProviderSKUID:    sku,
-						Region:           product.Attributes["regionCode"],
-						PurchaseModel:    "on_demand",
-						BillingUnit:      position.Unit,
-						PricingDimension: product.Attributes["usagetype"],
-						Dimensions: map[string]string{
+					for currency, amount := range position.PricePerUnit {
+						dimensions := map[string]string{
 							"rate_code": rateCode,
 							"currency":  currency,
-						},
-						Price: catalog.Money{Amount: amount, Currency: currency},
-						Tier:  tier,
-						Source: catalog.Source{
-							Type: "aws_price_list",
-							URL:  "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonDynamoDB/current/us-east-1/index.json",
-						},
-					})
+						}
+						if length := term.Attributes["LeaseContractLength"]; length != "" {
+							dimensions["lease_contract_length"] = length
+						}
+						records = append(records, catalog.PricingRecord{
+							Provider:         "aws",
+							Product:          "DynamoDB",
+							SKU:              sku,
+							ProviderSKUID:    sku,
+							Region:           product.Attributes["regionCode"],
+							PurchaseModel:    "on_demand",
+							BillingUnit:      position.Unit,
+							PricingDimension: product.Attributes["usagetype"],
+							Dimensions: map[string]string{
+								"rate_code": rateCode,
+								"currency":  currency,
+							},
+							Price: catalog.Money{Amount: amount, Currency: currency},
+							Tier:  tier,
+							Source: catalog.Source{
+								Type: "aws_price_list",
+								URL:  "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonDynamoDB/current/us-east-1/index.json",
+							},
+						})
+					}
 				}
 			}
 		}

@@ -16,7 +16,7 @@ func TestParseOffer(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	if len(records) != 38 {
+	if len(records) != 46 {
 		t.Fatalf("got %d pricing records, want 38", len(records))
 	}
 }
