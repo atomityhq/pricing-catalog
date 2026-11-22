@@ -1,0 +1,188 @@
+{
+  "formatVersion": "v1.0",
+  "offerCode": "AmazonDynamoDB",
+  "version": "20261111153612",
+  "publicationDate": "2026-11-11T15:36:12Z",
+  "products": {
+    "SKU-STORAGE": {
+      "sku": "SKU-STORAGE",
+      "productFamily": "Database Storage",
+      "attributes": {
+        "servicecode": "AmazonDynamoDB",
+        "regionCode": "us-east-1",
+        "location": "US East (N. Virginia)",
+        "volumeType": "Amazon DynamoDB - Point-In-Time-Restore (PITR) Backup Storage",
+        "usagetype": "USE1-TimedPITRStorage-ByteHrs"
+      }
+    },
+    "SKU-RESERVED": {
+      "sku": "SKU-RESERVED",
+      "productFamily": "Provisioned IOPS",
+      "attributes": {
+        "servicecode": "AmazonDynamoDB",
+        "regionCode": "eu-west-1",
+        "location": "EU (Ireland)",
+        "group": "DDB-ReadUnits",
+        "operation": "CommittedThroughput",
+        "usagetype": "EU-ReadCapacityUnit-Hrs"
+      }
+    },
+    "SKU-CDC": {
+      "sku": "SKU-CDC",
+      "attributes": {
+        "servicecode": "AmazonDynamoDB",
+        "regionCode": "us-west-2",
+        "location": "US West (Oregon)",
+        "group": "DDB-Kinesis",
+        "operation": "DelegatedOperations",
+        "usagetype": "USW2-ChangeDataCaptureUnits-Kinesis"
+      }
+    },
+    "SKU-GLOBAL": {
+      "sku": "SKU-GLOBAL",
+      "productFamily": "Amazon DynamoDB PayPerRequest Throughput",
+      "attributes": {
+        "servicecode": "AmazonDynamoDB",
+        "location": "Any",
+        "group": "DDB-VectorSearch",
+        "usagetype": "Global-VectorSearch"
+      }
+    },
+    "SKU-TEST": {
+      "sku": "SKU-TEST",
+      "productFamily": "Amazon DynamoDB PayPerRequest Throughput",
+      "attributes": {
+        "servicecode": "AmazonDynamoDB",
+        "location": "TST",
+        "group": "DDB-VectorSearch",
+        "usagetype": "TST1-VectorSearch"
+      }
+    }
+  },
+  "terms": {
+    "OnDemand": {
+      "SKU-STORAGE": {
+        "TERM-STORAGE": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "SKU-STORAGE",
+          "effectiveDate": "2026-11-01T00:00:00Z",
+          "priceDimensions": {
+            "RATE-STORAGE": {
+              "rateCode": "RATE-STORAGE",
+              "description": "DynamoDB PITR backup storage",
+              "unit": "GB-Mo",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "pricePerUnit": {"USD": "0.20"}
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "SKU-RESERVED": {
+        "TERM-ONDEMAND": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "SKU-RESERVED",
+          "effectiveDate": "2026-11-01T00:00:00Z",
+          "priceDimensions": {
+            "RATE-OD": {
+              "rateCode": "RATE-OD",
+              "description": "Read capacity units",
+              "unit": "ReadCapacityUnit-Hrs",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "pricePerUnit": {"USD": "0.00013"}
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "SKU-CDC": {
+        "TERM-CDC": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "SKU-CDC",
+          "effectiveDate": "2026-11-01T00:00:00Z",
+          "priceDimensions": {
+            "RATE-CDC": {
+              "rateCode": "RATE-CDC",
+              "description": "Change data capture for Kinesis Data Streams",
+              "unit": "ChangeDataCaptureUnits",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "pricePerUnit": {"USD": "0.10"}
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "SKU-GLOBAL": {
+        "TERM-GLOBAL": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "SKU-GLOBAL",
+          "effectiveDate": "2026-11-01T00:00:00Z",
+          "priceDimensions": {
+            "RATE-GLOBAL": {
+              "rateCode": "RATE-GLOBAL",
+              "description": "Global vector search request",
+              "unit": "Requests",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "pricePerUnit": {"USD": "0.00001"}
+            }
+          },
+          "termAttributes": {}
+        }
+      },
+      "SKU-TEST": {
+        "TERM-TEST": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "SKU-TEST",
+          "effectiveDate": "2026-11-01T00:00:00Z",
+          "priceDimensions": {
+            "RATE-TEST": {
+              "rateCode": "RATE-TEST",
+              "description": "Test-only vector search request",
+              "unit": "Requests",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "pricePerUnit": {"USD": "0.00001"}
+            }
+          },
+          "termAttributes": {}
+        }
+      }
+    },
+    "Reserved": {
+      "SKU-RESERVED": {
+        "TERM-RESERVED-PARTIAL": {
+          "offerTermCode": "6QCMYABX3D",
+          "sku": "SKU-RESERVED",
+          "effectiveDate": "2026-11-01T00:00:00Z",
+          "priceDimensions": {
+            "RATE-RES-HOURLY": {
+              "rateCode": "RATE-RES-HOURLY",
+              "description": "Reserved read capacity recurring fee",
+              "unit": "ReadCapacityUnit-Hrs",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "pricePerUnit": {"USD": "0.00009"}
+            },
+            "RATE-RES-UPFRONT": {
+              "rateCode": "RATE-RES-UPFRONT",
+              "description": "Partial upfront fee",
+              "unit": "Quantity",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "pricePerUnit": {"USD": "12.00"}
+            }
+          },
+          "termAttributes": {
+            "LeaseContractLength": "1yr",
+            "PurchaseOption": "Partial Upfront",
+            "OfferingClass": "standard"
+          }
+        }
+      }
+    }
+  }
+}

@@ -137,3 +137,10 @@ Real connectors may use an HTTP client, but tests should normally use captured/s
 Provider fetch and parsing failures should be returned rather than silently producing an empty or partial catalog.
 
 The future update pipeline should treat validation/fetch failures as a failed refresh and keep the last known-good snapshot.
+
+### `aws-dynamodb`
+
+Consumes the public Amazon DynamoDB AWS Price List offer and preserves its
+On-Demand and Reserved pricing dimensions, tiers, regions, and provider metadata.
+See [`connectors/aws/dynamodb/DESIGN.md`](../connectors/aws/dynamodb/DESIGN.md)
+for the source mapping, global/test-region handling, and known limitations.
