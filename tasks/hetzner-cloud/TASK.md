@@ -6,7 +6,7 @@ difficulty: easy
 target_connector: connectors/hetzner/cloud/
 ---
 
-#COMPLETED
+# COMPLETED
 
 # Hetzner Cloud Pricing Connector
 
