@@ -1,0 +1,58 @@
+{
+  "pricing": {
+    "currency": "EUR",
+    "vat_rate": "19.00",
+    "volume": {
+      "price_per_gb_month": {
+        "net": "0.0572000000",
+        "gross": "0.0680680000"
+      }
+    },
+    "server_types": [
+      {
+        "id": 114,
+        "name": "cx23",
+        "prices": [
+          {
+            "location": "fsn1",
+            "price_hourly": {
+              "net": "0.0088000000",
+              "gross": "0.0104720000"
+            },
+            "price_monthly": {
+              "net": "5.4900000000",
+              "gross": "6.5331000000"
+            },
+            "included_traffic": 21990232555520,
+            "price_per_tb_traffic": {
+              "net": "1.0000000000",
+              "gross": "1.1900000000"
+            }
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "name": "cax11",
+        "prices": [
+          {
+            "location": "fsn1",
+            "price_hourly": {
+              "net": "0.0096000000",
+              "gross": "0.0114240000"
+            },
+            "price_monthly": {
+              "net": "5.9900000000",
+              "gross": "7.1281000000"
+            },
+            "included_traffic": 21990232555520,
+            "price_per_tb_traffic": {
+              "net": "1.0000000000",
+              "gross": "1.1900000000"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
