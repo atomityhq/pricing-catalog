@@ -5,6 +5,7 @@ service: dynamodb
 difficulty: medium
 target_connector: connectors/aws/dynamodb/
 ---
+# COMPLETED
 
 # Amazon DynamoDB Pricing Connector
 
