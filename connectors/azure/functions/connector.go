@@ -1,7 +1,6 @@
 package functions
 
 import (
-	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -79,10 +78,8 @@ func (c *Connector) Fetch(ctx context.Context) ([]catalog.PricingRecord, error) 
 		nextURL = page.NextPageLink
 	}
 
-	body, err := json.Marshal(data)
-	if err != nil {
-		return nil, err
+	if len(data.Items) == 0 {
+		return nil, fmt.Errorf("empty Azure pricing response")
 	}
-
-	return Normalize(bytes.NewReader(body), c.sourceURL, c.sourceType)
+	return Normalize(data.Items, c.sourceURL, c.sourceType)
 }

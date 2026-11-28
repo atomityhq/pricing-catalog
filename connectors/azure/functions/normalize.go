@@ -1,9 +1,7 @@
 package functions
 
 import (
-	"encoding/json"
 	"fmt"
-	"io"
 	"math/big"
 	"pricing-catalog/pkg/catalog"
 	"reflect"
@@ -261,23 +259,14 @@ func normalizeSavingsPlans(
 	return records, nil
 }
 func Normalize(
-	reader io.Reader,
+	plans []AzurePlan,
 	source string,
 	sourceType string,
 ) ([]catalog.PricingRecord, error) {
-	var data AzureResponse
 
-	if err := json.NewDecoder(reader).Decode(&data); err != nil {
-		return nil, err
-	}
+	records := make([]catalog.PricingRecord, 0, len(plans))
 
-	if len(data.Items) == 0 {
-		return nil, fmt.Errorf("empty Azure pricing response")
-	}
-
-	records := make([]catalog.PricingRecord, 0, len(data.Items))
-
-	groups := groupPlans(data.Items)
+	groups := groupPlans(plans)
 
 	savingsRecords := make(map[string]catalog.PricingRecord)
 
