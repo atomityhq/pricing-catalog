@@ -5,6 +5,7 @@ service: managed-disks
 difficulty: easy
 target_connector: connectors/azure/managed-disks/
 ---
+# COMPLETED
 
 # Azure Managed Disks Pricing Connector
 

@@ -6,6 +6,8 @@ difficulty: easy
 target_connector: connectors/gcp/persistent-disk/
 ---
 
+# COMPLETED
+
 # Google Persistent Disk Pricing Connector
 
 ## Assignment
