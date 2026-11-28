@@ -1,0 +1,388 @@
+{
+  "Items": [
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 0.0,
+      "retailPrice": 0.175,
+      "unitPrice": 0.175,
+      "armRegionName": "canadacentral",
+      "location": "CA Central",
+      "effectiveStartDate": "2019-11-11T00:00:00Z",
+      "meterId": "00df9e7f-6042-48fd-93a6-df8e52cb10b5",
+      "meterName": "Premium vCPU Duration",
+      "productId": "DZH318Z0BXVK",
+      "skuId": "DZH318Z0BXVK/000L",
+      "productName": "Premium Functions",
+      "skuName": "Premium",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "1 Hour",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": true,
+      "armSkuName": "",
+      "savingsPlan": [
+        {
+          "unitPrice": 0.14525,
+          "retailPrice": 0.14525,
+          "term": "3 Years"
+        },
+        {
+          "unitPrice": 0.14525,
+          "retailPrice": 0.14525,
+          "term": "1 Year"
+        }
+      ]
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 0.0,
+      "retailPrice": 0.0,
+      "unitPrice": 0.0,
+      "armRegionName": "usgovarizona",
+      "location": "US Gov AZ",
+      "effectiveStartDate": "2018-09-03T00:00:00Z",
+      "meterId": "bef050c3-c09a-4d09-bdeb-14ba02f1b9f4",
+      "meterName": "Standard Total Executions",
+      "productId": "DZH318Z0BNWB",
+      "skuId": "DZH318Z0BNWB/001H",
+      "productName": "Functions",
+      "skuName": "Standard",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "10",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": false,
+      "armSkuName": ""
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 100000.0,
+      "retailPrice": 0.000002,
+      "unitPrice": 0.000002,
+      "armRegionName": "usgovarizona",
+      "location": "US Gov AZ",
+      "effectiveStartDate": "2018-09-03T00:00:00Z",
+      "meterId": "bef050c3-c09a-4d09-bdeb-14ba02f1b9f4",
+      "meterName": "Standard Total Executions",
+      "productId": "DZH318Z0BNWB",
+      "skuId": "DZH318Z0BNWB/001H",
+      "productName": "Functions",
+      "skuName": "Standard",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "10",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": false,
+      "armSkuName": ""
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 0.0,
+      "retailPrice": 0.0,
+      "unitPrice": 0.0,
+      "armRegionName": "southafricanorth",
+      "location": "ZA North",
+      "effectiveStartDate": "2017-01-01T00:00:00Z",
+      "meterId": "2a384075-01d7-4f66-a84a-0eed3ca58876",
+      "meterName": "Standard Execution Time",
+      "productId": "DZH318Z0BNWB",
+      "skuId": "DZH318Z0BNWB/001B",
+      "productName": "Functions",
+      "skuName": "Standard",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "1 GB Second",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": false,
+      "armSkuName": ""
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 400000.0,
+      "retailPrice": 0.000016,
+      "unitPrice": 0.000016,
+      "armRegionName": "southafricanorth",
+      "location": "ZA North",
+      "effectiveStartDate": "2017-01-01T00:00:00Z",
+      "meterId": "2a384075-01d7-4f66-a84a-0eed3ca58876",
+      "meterName": "Standard Execution Time",
+      "productId": "DZH318Z0BNWB",
+      "skuId": "DZH318Z0BNWB/001B",
+      "productName": "Functions",
+      "skuName": "Standard",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "1 GB Second",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": false,
+      "armSkuName": ""
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 0.0,
+      "retailPrice": 0.000005,
+      "unitPrice": 0.000005,
+      "armRegionName": "usgovtexas",
+      "location": "US Gov TX",
+      "effectiveStartDate": "2026-06-01T00:00:00Z",
+      "meterId": "0247c0d0-3e68-5064-a4e9-efe79c874ef2",
+      "meterName": "Always Ready Total Executions",
+      "productId": "DZH318Z0DW2R",
+      "skuId": "DZH318Z0DW2R/007R",
+      "productName": "Flex Consumption",
+      "skuName": "Always Ready",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "10",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": true,
+      "armSkuName": "Always Ready"
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 0.0,
+      "retailPrice": 0.000016,
+      "unitPrice": 0.000016,
+      "armRegionName": "eastus",
+      "location": "US East",
+      "effectiveStartDate": "2024-12-01T00:00:00Z",
+      "meterId": "027afd58-24db-521f-8309-dcb3da519422",
+      "meterName": "Always Ready Execution Time",
+      "productId": "DZH318Z0DW2R",
+      "skuId": "DZH318Z0DW2R/0080",
+      "productName": "Flex Consumption",
+      "skuName": "Always Ready",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "1 GB Second",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": true,
+      "armSkuName": "Always Ready",
+      "savingsPlan": [
+        {
+          "unitPrice": 0.00001328,
+          "retailPrice": 0.00001328,
+          "term": "3 Years"
+        },
+        {
+          "unitPrice": 0.00001328,
+          "retailPrice": 0.00001328,
+          "term": "1 Year"
+        }
+      ]
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 0.0,
+      "retailPrice": 0.0,
+      "unitPrice": 0.0,
+      "armRegionName": "francecentral",
+      "location": "FR Central",
+      "effectiveStartDate": "2025-06-01T00:00:00Z",
+      "meterId": "04bf9ffe-7320-5321-9ed7-661107c8008a",
+      "meterName": "On Demand Total Executions",
+      "productId": "DZH318Z0DW2R",
+      "skuId": "DZH318Z0DW2R/0095",
+      "productName": "Flex Consumption",
+      "skuName": "On Demand",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "10",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": true,
+      "armSkuName": "On Demand",
+      "savingsPlan": [
+        {
+          "unitPrice": 0.0,
+          "retailPrice": 0.00000332,
+          "term": "3 Years"
+        },
+        {
+          "unitPrice": 0.0,
+          "retailPrice": 0.00000332,
+          "term": "1 Year"
+        }
+      ]
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 25000.0,
+      "retailPrice": 0.000004,
+      "unitPrice": 0.000004,
+      "armRegionName": "francecentral",
+      "location": "FR Central",
+      "effectiveStartDate": "2025-06-01T00:00:00Z",
+      "meterId": "04bf9ffe-7320-5321-9ed7-661107c8008a",
+      "meterName": "On Demand Total Executions",
+      "productId": "DZH318Z0DW2R",
+      "skuId": "DZH318Z0DW2R/0095",
+      "productName": "Flex Consumption",
+      "skuName": "On Demand",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "10",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": true,
+      "armSkuName": "On Demand",
+      "savingsPlan": [
+        {
+          "unitPrice": 0.0,
+          "retailPrice": 0.00000332,
+          "term": "3 Years"
+        },
+        {
+          "unitPrice": 0.0,
+          "retailPrice": 0.00000332,
+          "term": "1 Year"
+        }
+      ]
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 0.0,
+      "retailPrice": 0.000004,
+      "unitPrice": 0.000004,
+      "armRegionName": "southcentralus",
+      "location": "US South Central",
+      "effectiveStartDate": "2024-12-01T00:00:00Z",
+      "meterId": "051a85df-ba8b-53d1-ba90-a11812cdd670",
+      "meterName": "Always Ready Baseline",
+      "productId": "DZH318Z0DW2R",
+      "skuId": "DZH318Z0DW2R/0076",
+      "productName": "Flex Consumption",
+      "skuName": "Always Ready",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "1 GB Second",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": true,
+      "armSkuName": "Always Ready",
+      "savingsPlan": [
+        {
+          "unitPrice": 0.00000332,
+          "retailPrice": 0.00000332,
+          "term": "3 Years"
+        },
+        {
+          "unitPrice": 0.00000332,
+          "retailPrice": 0.00000332,
+          "term": "1 Year"
+        }
+      ]
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 0.0,
+      "retailPrice": 0.013,
+      "unitPrice": 0.013,
+      "armRegionName": "australiaeast",
+      "location": "AU East",
+      "effectiveStartDate": "2019-11-11T00:00:00Z",
+      "meterId": "0655e916-1ef2-4174-a30f-a86c94a7e051",
+      "meterName": "Premium Memory Duration",
+      "productId": "DZH318Z0BXVK",
+      "skuId": "DZH318Z0BXVK/000J",
+      "productName": "Premium Functions",
+      "skuName": "Premium",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "1 GiB Hour",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": true,
+      "armSkuName": "",
+      "savingsPlan": [
+        {
+          "unitPrice": 0.01079,
+          "retailPrice": 0.01079,
+          "term": "3 Years"
+        },
+        {
+          "unitPrice": 0.01079,
+          "retailPrice": 0.01079,
+          "term": "1 Year"
+        }
+      ]
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 0.0,
+      "retailPrice": 0.0,
+      "unitPrice": 0.0,
+      "armRegionName": "centralindia",
+      "location": "IN Central",
+      "effectiveStartDate": "2025-06-01T00:00:00Z",
+      "meterId": "076be548-1ca8-55f4-b1b2-e736b5f63bb9",
+      "meterName": "On Demand Execution Time",
+      "productId": "DZH318Z0DW2R",
+      "skuId": "DZH318Z0DW2R/008N",
+      "productName": "Flex Consumption",
+      "skuName": "On Demand",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "1 GB Second",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": true,
+      "armSkuName": "On Demand",
+      "savingsPlan": [
+        {
+          "unitPrice": 0.0,
+          "retailPrice": 0.00003071,
+          "term": "3 Years"
+        },
+        {
+          "unitPrice": 0.0,
+          "retailPrice": 0.00003071,
+          "term": "1 Year"
+        }
+      ]
+    },
+    {
+      "currencyCode": "USD",
+      "tierMinimumUnits": 100000.0,
+      "retailPrice": 0.000037,
+      "unitPrice": 0.000037,
+      "armRegionName": "centralindia",
+      "location": "IN Central",
+      "effectiveStartDate": "2025-06-01T00:00:00Z",
+      "meterId": "076be548-1ca8-55f4-b1b2-e736b5f63bb9",
+      "meterName": "On Demand Execution Time",
+      "productId": "DZH318Z0DW2R",
+      "skuId": "DZH318Z0DW2R/008N",
+      "productName": "Flex Consumption",
+      "skuName": "On Demand",
+      "serviceName": "Functions",
+      "serviceId": "DZH319HJX2WX",
+      "serviceFamily": "Compute",
+      "unitOfMeasure": "1 GB Second",
+      "type": "Consumption",
+      "isPrimaryMeterRegion": true,
+      "armSkuName": "On Demand",
+      "savingsPlan": [
+        {
+          "unitPrice": 0.0,
+          "retailPrice": 0.00003071,
+          "term": "3 Years"
+        },
+        {
+          "unitPrice": 0.0,
+          "retailPrice": 0.00003071,
+          "term": "1 Year"
+        }
+      ]
+    }
+  ],
+  "Count": 13,
+  "NextPageLink": null
+}
